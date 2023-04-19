@@ -21,7 +21,7 @@
   "dependencies": {
     "@tamagui/animations-react-native": "1.15.14",
     "@tamagui/babel-plugin": "1.15.14",
-    "@tamagui/config": "1.15.14",
+    "@tamagui/config": "1.15.17",
     "@tamagui/font-inter": "1.15.14",
     "@tamagui/lucide-icons": "1.15.14",
     "@tamagui/themes": "1.15.14",
