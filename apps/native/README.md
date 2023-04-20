@@ -1,0 +1,25 @@
+# Available commands
+
+- postinstall
+- dev
+- start
+- start:all
+- ios:build:local
+- ios:build:eas
+- android:build:local
+- android:build:eas
+- eas:resignADHOC
+- detox:prepare
+- detox:android:debug:build
+- detox:android:debug:test
+- detox:android:release:build
+- detox:android:release:test
+- detox:ios:debug:build
+- detox:ios:debug:test
+- detox:ios:release:build
+- detox:ios:release:test
+- debugger
+- lint
+- clean
+- android
+- ios

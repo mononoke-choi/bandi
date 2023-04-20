@@ -1,0 +1,25 @@
+{
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "postinstall": "npx typesync",
+    "dev": "turbo run dev",
+    "build": "turbo run build",
+    "clean": "turbo run clean && npx rimraf ./**/node_modules",
+    "postclean": "yarn",
+    "lint": "turbo run lint",
+    "prettier": "prettier . -w"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@types/prettier": "latest",
+    "eslint-config-custom": "*",
+    "prettier": "latest",
+    "turbo": "1.9.1",
+    "zx": "^7.2.0"
+  },
+  "packageManager": "yarn@1.22.19"
+}

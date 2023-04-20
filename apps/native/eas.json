@@ -1,0 +1,45 @@
+{
+  "build": {
+    "base": {
+      "ios": {
+        "resourceClass": "m-medium"
+      }
+    },
+    "development": {
+      "android": {
+        "withoutCredentials": true
+      },
+      "developmentClient": true,
+      "distribution": "internal",
+      "env": {
+        "APP_ENV": "development"
+      },
+      "extends": "base",
+      "ios": {
+        "simulator": true
+      }
+    },
+    "preview": {
+      "android": {
+        "buildType": "apk"
+      },
+      "distribution": "internal",
+      "env": {
+        "APP_ENV": "preview"
+      },
+      "extends": "base"
+    },
+    "production": {
+      "env": {
+        "APP_ENV": "production"
+      },
+      "extends": "base"
+    }
+  },
+  "cli": {
+    "version": ">= 2.4.0"
+  },
+  "submit": {
+    "production": {}
+  }
+}
