@@ -1,0 +1,56 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# vercel
+.vercel
+
+# dependencies
+node_modules
+.pnp
+.pnp.js
+.idea
+
+# testing
+coverage
+
+# next.js
+.next/
+.swc/
+out/
+build
+
+# expo
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+*.orig.*
+.expo*
+web-build/
+ios
+android
+
+# misc
+.DS_Store
+*.pem
+dist
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# local env files
+.env
+.env.development.local
+.env.test.local
+.env.production.local
+env.json
+
+# turbo
+.turbo
+
+# codegen
+__generated__
+.tamagui
+.metro-health-check*
