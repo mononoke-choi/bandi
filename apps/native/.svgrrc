@@ -1,0 +1,8 @@
+{
+  "replaceAttrValues": {
+    "#000": "{props.color1}",
+    "#001": "{props.color2}",
+    "#002": "{props.color3}",
+    "#003": "{props.color4}"
+  }
+}
