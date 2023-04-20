@@ -37,7 +37,7 @@
     "@react-native-community/netinfo": "9.3.7",
     "@react-navigation/native": "^6.0.2",
     "@tamagui/animations-react-native": "1.15.14",
-    "@tamagui/babel-plugin": "1.15.14",
+    "@tamagui/babel-plugin": "1.15.21",
     "@tamagui/config": "1.15.14",
     "@tamagui/font-inter": "1.15.14",
     "@tamagui/lucide-icons": "1.15.14",
