@@ -1,0 +1,26 @@
+{
+  "name": "api",
+  "version": "0.0.0",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsup src/index.ts --dts --minify",
+    "dev": "tsup src/index.ts --dts --watch",
+    "clean": "rm -rf dist",
+    "generate:orval:prod": "APP_ENV=production orval --config src/orvalConfig.ts",
+    "generate:orval:dev": "APP_ENV=development orval --config src/orvalConfig.ts",
+    "lint": "eslint . --fix"
+  },
+  "devDependencies": {
+    "eslint-config-custom": "*",
+    "ts-node": "^10.9.1",
+    "tsconfig": "*",
+    "tsup": "^6.0.1",
+    "typescript": "^5.0.4"
+  },
+  "dependencies": {
+    "expo-constants": "^14.2.1",
+    "orval": "^6.14.3"
+  }
+}
