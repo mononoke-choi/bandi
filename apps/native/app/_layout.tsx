@@ -14,7 +14,7 @@ import { useColorScheme } from 'react-native';
 import { RecoilRoot } from 'recoil';
 import { TamaguiProvider, Theme } from 'tamagui';
 import { WithRecoilSync } from 'ui/src/HOC/withRecoilSync';
-import { tamaguiConfig } from 'ui/src/tamagui.config';
+import tamaguiConfig from 'ui/src/tamagui.config';
 
 dayjs.locale('ko');
 dayjs.extend(duration);

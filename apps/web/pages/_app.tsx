@@ -1,35 +1,53 @@
 import '../styles/globals.css';
 import { NextThemeProvider, useRootTheme } from '@tamagui/next-theme';
-import { AppProps } from 'next/app';
 import Head from 'next/head';
-import React, { useMemo } from 'react';
+import Script from 'next/script';
+import React, { ReactNode, startTransition } from 'react';
+import type { SolitoAppProps } from 'solito';
 import { TamaguiProvider } from 'tamagui';
-import { tamaguiConfig } from 'ui/src/tamagui.config';
 
-export default function App({ Component, pageProps }: AppProps) {
+import tamaguiConfig from '../tamagui.config';
+
+function InnerApp({ children }: { children: ReactNode }) {
   const [theme, setTheme] = useRootTheme();
-  // memo to avoid re-render on dark/light change
 
-  const contents = useMemo(() => {
-    return <Component {...pageProps} />;
-  }, [pageProps, Component]);
-  // because we do our custom getCSS() above, we disableInjectCSS here
+  return (
+    <NextThemeProvider
+      onChangeTheme={next => {
+        startTransition(() => {
+          setTheme(next);
+        });
+      }}
+    >
+      <TamaguiProvider
+        config={tamaguiConfig}
+        disableInjectCSS
+        disableRootThemeClass
+        defaultTheme={theme}
+      >
+        {children}
+      </TamaguiProvider>
+    </NextThemeProvider>
+  );
+}
 
+export default function App({ Component, pageProps }: SolitoAppProps) {
   return (
     <>
       <Head>
         <title>bandi</title>
       </Head>
-      <NextThemeProvider onChangeTheme={setTheme}>
-        <TamaguiProvider
-          config={tamaguiConfig}
-          disableInjectCSS
-          disableRootThemeClass
-          defaultTheme={theme}
-        >
-          {contents}
-        </TamaguiProvider>
-      </NextThemeProvider>
+      <Script
+        id="tamagui-animations-mount"
+        key="tamagui-animations-mount"
+        dangerouslySetInnerHTML={{
+          // avoid flash of animated things on enter
+          __html: `document.documentElement.classList.add('t_unmounted')`,
+        }}
+      />
+      <InnerApp>
+        <Component {...pageProps} />
+      </InnerApp>
     </>
   );
 }

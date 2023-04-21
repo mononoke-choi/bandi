@@ -89,7 +89,7 @@ export default async function handler(
         .status(HTTP_STATUS.INTERNAL_SERVER_ERROR)
         .send("Signatures didn't match!");
     } else {
-      await fetch('<Your personal slack webhook url>', {
+      await fetch('<YOUR_SLACK_WEBHOOK_URL>', {
         body: getSlackMessagePayload(info, isErrorBuild),
         method: 'POST',
       });
@@ -98,7 +98,7 @@ export default async function handler(
   } catch (error) {
     console.log('[log on vercel]', error);
 
-    await fetch('<Your personal slack webhook url>', {
+    await fetch('<YOUR_SLACK_WEBHOOK_URL>', {
       body: getSlackMessagePayload(info, isErrorBuild),
       method: 'POST',
     });

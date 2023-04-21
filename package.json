@@ -11,10 +11,12 @@
     "clean": "turbo run clean && npx rimraf ./**/node_modules",
     "postclean": "yarn",
     "lint": "turbo run lint",
-    "prettier": "prettier . -w"
+    "prettier": "prettier . -w",
+    "check-deps": "check-dependency-version-consistency ."
   },
   "dependencies": {},
   "devDependencies": {
+    "check-dependency-version-consistency": "latest",
     "@types/prettier": "latest",
     "eslint-config-custom": "*",
     "prettier": "latest",

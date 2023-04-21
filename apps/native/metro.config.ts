@@ -44,6 +44,12 @@ config.resolver = {
   sourceExts: [...config.resolver.sourceExts, 'svg'],
 };
 
-config.transformer.minifierConfig.compress.drop_console = true;
+const { FileStore } = require('metro-cache');
+config.cacheStores = [
+  // Ensure the cache isn't shared between projects
+  // this ensures the transform-time environment variables are changed to reflect
+  // the current project.
+  new FileStore({ root: path.join(projectRoot, 'node_modules/.cache/metro') }),
+];
 
 module.exports = config;

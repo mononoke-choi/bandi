@@ -1,7 +1,6 @@
 import Constants from 'expo-constants';
-import { assign } from 'lodash';
 
-interface CustomClient {
+type CustomClient = {
   url: string;
   method: 'get' | 'post' | 'put' | 'delete' | 'patch';
   /* eslint-disable  @typescript-eslint/no-explicit-any */
@@ -9,7 +8,7 @@ interface CustomClient {
   headers?: HeadersInit;
   data?: BodyType<unknown>;
   signal?: AbortSignal;
-}
+};
 
 const customClient = async <ResponseType>(
   { url, method, params, headers, signal, data }: CustomClient,
@@ -20,16 +19,15 @@ const customClient = async <ResponseType>(
       url +
       '?' +
       new URLSearchParams(params),
-    assign(
-      {},
-      {
-        headers,
-        method,
-        next: nextConfig,
-        signal,
+    {
+      headers: {
+        ...headers,
       },
-      data ? { body: JSON.stringify(data) } : {},
-    ),
+      method,
+      next: nextConfig,
+      signal,
+      ...(data ? { body: JSON.stringify(data) } : {}),
+    },
   );
 
   if (response.ok) {

@@ -1,16 +1,13 @@
-process.env.TAMAGUI_TARGET = 'native'; // Don't forget to specify your TAMAGUI_TARGET here
-
 module.exports = function (api) {
   api.cache(true);
   return {
     presets: ['babel-preset-expo'],
     plugins: [
-      '@babel/plugin-proposal-export-namespace-from',
       [
         '@tamagui/babel-plugin',
         {
-          components: ['tamagui'],
-          config: '../../packages/ui/src/tamagui.config.ts',
+          components: ['tamagui', 'ui'],
+          config: './tamagui.config.ts',
           logTimings: true,
         },
       ],

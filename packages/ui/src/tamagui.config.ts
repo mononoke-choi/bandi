@@ -25,9 +25,7 @@ const animations = createAnimations({
   },
 });
 
-const headingFont = createInterFont();
-
-const bodyFont = createInterFont();
+const interFont = createInterFont();
 
 const tamaguiConfig = createTamagui({
   animations,
@@ -36,8 +34,8 @@ const tamaguiConfig = createTamagui({
   themeClassNameOnRoot: false,
   shorthands,
   fonts: {
-    heading: headingFont,
-    body: bodyFont,
+    heading: interFont,
+    body: interFont,
   },
   themes,
   tokens,
@@ -60,5 +58,4 @@ const tamaguiConfig = createTamagui({
 });
 
 export type TamaguiConfig = typeof tamaguiConfig;
-export { tamaguiConfig };
 export default tamaguiConfig;

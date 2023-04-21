@@ -1,4 +1,4 @@
-import { getApiHello } from 'api/src/__generated__/sample/sample';
+import { getApiHello } from 'api';
 import { useEffect } from 'react';
 import Wip from 'ui/src/template/wip';
 

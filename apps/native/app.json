@@ -18,7 +18,7 @@
     "extra": {
       "router": {
         "asyncRoutes": "development",
-        "origin": "https://<Your web url>/"
+        "origin": "<YOUR_WEB_URL>.vercel.app"
       }
     },
     "icon": "./assets/images/icon.png",
@@ -45,7 +45,7 @@
     "updates": {
       "fallbackToCacheTimeout": 0
     },
-    "userInterfaceStyle": "light",
+    "userInterfaceStyle": "automatic",
     "version": "1.0.0",
     "web": {
       "bundler": "metro"

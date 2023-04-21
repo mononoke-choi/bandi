@@ -1,12 +1,16 @@
 {
   "build": {
     "base": {
+      "env": {
+        "TAMAGUI_TARGET": "native"
+      },
       "ios": {
         "resourceClass": "m-medium"
       }
     },
     "development": {
       "android": {
+        "image": "latest",
         "withoutCredentials": true
       },
       "developmentClient": true,
@@ -16,6 +20,7 @@
       },
       "extends": "base",
       "ios": {
+        "image": "latest",
         "simulator": true
       }
     },

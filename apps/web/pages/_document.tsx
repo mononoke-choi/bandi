@@ -8,7 +8,8 @@ import Document, {
 } from 'next/document';
 import { Children } from 'react';
 import { AppRegistry } from 'react-native';
-import { tamaguiConfig } from 'ui/src/tamagui.config';
+
+import tamaguiConfig from '../tamagui.config';
 
 class MyDocument extends Document {
   static async getInitialProps({ renderPage }: DocumentContext) {

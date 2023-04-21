@@ -81,7 +81,6 @@
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",
-    "@babel/plugin-proposal-export-namespace-from": "^7.18.9",
     "@faker-js/faker": "^7.6.0",
     "@types/babel__core": "^7.20.0",
     "@types/jest": "^29.5.0",

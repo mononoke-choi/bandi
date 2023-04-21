@@ -1,8 +1,9 @@
 {
   "compilerOptions": {
-    "strict": true
+    "strict": true,
+    "types": ["next/types/global"],
   },
   "exclude": ["build", "dist", "node_modules"],
   "extends": "tsconfig/react-native-library",
-  "include": [".", "../../@types/**/*", "../../apps/web/next-env.d.ts"]
+  "include": [".", "../../@types/**/*"]
 }

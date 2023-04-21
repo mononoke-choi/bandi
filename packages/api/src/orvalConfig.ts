@@ -1,18 +1,15 @@
 import defineConfig from 'orval';
 
-import ENV from './env.json';
-
 defineConfig({
   hooks: {
     afterAllFilesWrite: 'eslint --fix',
   },
   input: {
-    // eslint-disable-next-line turbo/no-undeclared-env-vars
-    target: `${ENV[process.env.APP_ENV].API_END_POINT}/api/_swagger`,
+    target: 'http://localhost:3000/api/_swagger',
   },
   output: {
     clean: true,
-    mode: 'tags-split',
+    mode: 'single',
     override: {
       mutator: {
         name: 'customClient',

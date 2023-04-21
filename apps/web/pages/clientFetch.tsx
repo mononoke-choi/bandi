@@ -1,5 +1,4 @@
-import { GetApiHello200 } from 'api/src/__generated__/APISpecification.generated.schemas';
-import { getApiHello } from 'api/src/__generated__/sample/sample';
+import { GetApiHello200, getApiHello } from 'api';
 import React, { useEffect, useState } from 'react';
 
 export default function ClientFetch() {
