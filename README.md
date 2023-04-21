@@ -73,3 +73,4 @@ Web based on turbo repo
     - Solito
   - Replace async storage with mmkv storage
   - Fix broken detox
+  - handling dotenv sensitive data
