@@ -1,4 +1,4 @@
-# Bandi 🐶 (WIP)
+# Bandi 🐶 (🏗️🏗️ WIP 🏗️🏗️)
 
 This is React Native opinionated boilerplate with Expo-router, Tamagui, Recoil and Next.js supporting Android, iOS and
 Web based on turbo repo
@@ -74,3 +74,8 @@ Web based on turbo repo
   - Replace async storage with mmkv storage
   - Fix broken detox
   - handling dotenv sensitive data
+- Docs
+  - apps/native
+  - apps/web
+  - packages/api
+  - packages/ui
