@@ -57,6 +57,14 @@ module.exports = {
       },
     ],
     'sort-keys-fix/sort-keys-fix': 'error',
+    'react/jsx-curly-brace-presence': [
+      1,
+      {
+        props: 'never',
+        children: 'never',
+        propElementValues: 'always',
+      },
+    ],
   },
   overrides: [
     {
