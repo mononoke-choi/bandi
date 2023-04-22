@@ -1,4 +1,4 @@
-import '../styles/globals.css';
+import '@tamagui/core/reset.css';
 import { NextThemeProvider, useRootTheme } from '@tamagui/next-theme';
 import Head from 'next/head';
 import Script from 'next/script';
@@ -15,13 +15,14 @@ function InnerApp({ children }: { children: ReactNode }) {
     <NextThemeProvider
       onChangeTheme={next => {
         startTransition(() => {
-          setTheme(next);
+          setTheme(next as 'dark' | 'light');
         });
       }}
     >
       <TamaguiProvider
         config={tamaguiConfig}
         disableInjectCSS
+        themeClassNameOnRoot
         disableRootThemeClass
         defaultTheme={theme}
       >
