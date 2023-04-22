@@ -19,7 +19,6 @@ module.exports = {
     'plugin:import/recommended',
     'plugin:jsonc/recommended-with-json',
     'plugin:@typescript-eslint/recommended',
-    'plugin:tailwindcss/recommended',
   ],
   ignorePatterns: [
     '**/*/__generated__/',
@@ -32,7 +31,7 @@ module.exports = {
     '@types',
     'android/**/*',
   ],
-  plugins: ['@typescript-eslint', 'tailwindcss', 'cypress', 'sort-keys-fix'],
+  plugins: ['@typescript-eslint', 'cypress', 'sort-keys-fix'],
   parser: '@typescript-eslint/parser',
   rules: {
     '@next/next/no-html-link-for-pages': 'off',

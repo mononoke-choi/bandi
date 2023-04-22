@@ -19,7 +19,6 @@ Web based on turbo repo
 - [Tamagui](https://tamagui.dev/)
 - [Next.js](https://nextjs.org/)
 - [Swagger](https://swagger.io/)
-- [Tailwind](https://tailwindcss.com/)
 - [Solito](https://solito.dev/)
 - [Orval](https://orval.dev/)
 - [Svgr](https://react-svgr.com/)
