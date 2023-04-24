@@ -56,20 +56,21 @@ Web based on turbo repo
 - Web
   - Examples
     - Svgr usage
-    - Next.js
-      - Migrate to v13
-      - Add app header and bottom navigation for consistent UI between native and web
-      - Solito
-      - CSR, SSR, SSG, ISR, On-demand ISR
-      - Parallel route
-      - Conditional route
-      - Intercepting route
+    - Migrate to v13
+    - Add app header and bottom navigation for consistent UI between native and web
+    - Solito
+    - CSR, SSR, SSG, ISR, On-demand ISR
+    - Parallel route
+    - Conditional route
+    - Intercepting route
+    - Shared element transition
   - Recoil sync
   - Cypress
 - Native
   - Examples
     - Svgr usage
     - Solito
+    - Shared element transition
   - Replace async storage with mmkv storage
   - Fix broken detox
   - handling dotenv sensitive data
