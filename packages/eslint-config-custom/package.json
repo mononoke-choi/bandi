@@ -9,7 +9,7 @@
     "@typescript-eslint/parser": "^5.57.1",
     "eslint": "^8.38.0",
     "eslint-config-next": "13.3.0",
-    "eslint-config-turbo": "1.9.1",
+    "eslint-config-turbo": "1.9.3",
     "eslint-plugin-cypress": "^2.13.2",
     "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-jsonc": "^2.7.0",
