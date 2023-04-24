@@ -5,7 +5,7 @@ defineConfig({
     afterAllFilesWrite: 'eslint --fix',
   },
   input: {
-    target: 'http://localhost:3000/api/_swagger',
+    target: 'http://localhost:3000/api/swagger',
   },
   output: {
     clean: true,

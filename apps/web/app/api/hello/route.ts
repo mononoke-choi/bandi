@@ -1,10 +1,4 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
-
-import { HTTP_STATUS } from '../../service/httpStatus';
-
-type ResponseData = {
-  message: string;
-};
+import { HTTP_STATUS } from '../../../service/httpStatus';
 
 /**
  * @swagger
@@ -29,9 +23,10 @@ type ResponseData = {
  *                required:
  *                  - message
  */
-export default function handler(
-  req: NextApiRequest,
-  res: NextApiResponse<ResponseData>,
-) {
-  res.status(HTTP_STATUS.OK).json({ message: 'Hello Bandi!' });
+export async function GET() {
+  return new Response(JSON.stringify({ message: 'Hello Bandi!' }), {
+    status: HTTP_STATUS.OK,
+  });
 }
+
+export const runtime = 'experimental-edge';

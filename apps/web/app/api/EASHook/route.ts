@@ -1,9 +1,9 @@
 import crypto from 'crypto';
 
-import type { NextApiRequest, NextApiResponse } from 'next';
+import { headers } from 'next/headers';
 import safeCompare from 'safe-compare';
 
-import { HTTP_STATUS } from '../../service/httpStatus';
+import { HTTP_STATUS } from '../../../service/httpStatus';
 
 const getSlackMessagePayload = (
   info: EASBuildPayload,
@@ -59,24 +59,26 @@ const getSlackMessagePayload = (
   });
 };
 
-export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse<string>,
-) {
-  const info = req.body as EASBuildPayload;
-  const isErrorBuild = info.status !== 'finished';
+export async function GET(request: Request) {
+  const body = (await request.json()) as EASBuildPayload;
+  const headersList = headers();
+  const isErrorBuild = body.status !== 'finished';
 
   try {
-    const expoSignature = req.headers['expo-signature'];
+    const expoSignature = headersList.get('expo-signature');
 
     if (!expoSignature) {
-      return res
-        .status(HTTP_STATUS.BAD_REQUEST)
-        .send('Expo-signature header is undefined');
+      return new Response(
+        JSON.stringify('Expo-signature header is undefined'),
+        {
+          status: HTTP_STATUS.BAD_REQUEST,
+        },
+      );
     }
+
     // eslint-disable-next-line turbo/no-undeclared-env-vars
     const hmac = crypto.createHmac('sha1', process.env.SECRET_WEBHOOK_KEY);
-    hmac.update(JSON.stringify(req.body));
+    hmac.update(JSON.stringify(body));
     const hash = `sha1=${hmac.digest('hex')}`;
 
     if (
@@ -85,23 +87,31 @@ export default async function handler(
         hash,
       )
     ) {
-      res
-        .status(HTTP_STATUS.INTERNAL_SERVER_ERROR)
-        .send("Signatures didn't match!");
+      return new Response(JSON.stringify("Signatures didn't match!"), {
+        status: HTTP_STATUS.INTERNAL_SERVER_ERROR,
+      });
     } else {
       await fetch('<YOUR_SLACK_WEBHOOK_URL>', {
-        body: getSlackMessagePayload(info, isErrorBuild),
+        body: getSlackMessagePayload(body, isErrorBuild),
         method: 'POST',
       });
-      res.status(HTTP_STATUS.OK).send('UPDATED');
+
+      return new Response(JSON.stringify('UPDATED'), {
+        status: HTTP_STATUS.OK,
+      });
     }
   } catch (error) {
     console.log('[log on vercel]', error);
 
     await fetch('<YOUR_SLACK_WEBHOOK_URL>', {
-      body: getSlackMessagePayload(info, isErrorBuild),
+      body: getSlackMessagePayload(body, isErrorBuild),
       method: 'POST',
     });
-    res.status(HTTP_STATUS.BAD_REQUEST);
+
+    return new Response(JSON.stringify('UPDATED'), {
+      status: HTTP_STATUS.BAD_REQUEST,
+    });
   }
 }
+
+export const runtime = 'experimental-edge';

@@ -1,8 +1,12 @@
 /** @type {import('next').NextConfig} */
 const { withTamagui } = require('@tamagui/next-plugin');
-const { join } = require('path');
+const withBundleAnalyzer = require('@next/bundle-analyzer');
 
 const plugins = [
+  withBundleAnalyzer({
+    enabled: process.env.NODE_ENV === 'production',
+    openAnalyzer: process.env.ANALYZE === 'true',
+  }),
   withTamagui({
     config: './tamagui.config.ts',
     components: ['tamagui', 'ui'],
@@ -10,38 +14,38 @@ const plugins = [
     logTimings: true,
     disableExtraction: process.env.NODE_ENV === 'development',
     enableCSSOptimizations: false,
-    disableFontSupport: false,
+    disableFontSupport: true,
     useReactNativeWebLite: true,
-    shouldExtract: path => {
-      if (path.includes(join('packages', 'app'))) {
-        return true;
-      }
-    },
+    excludeReactNativeWebExports: [
+      'Switch',
+      'ProgressBar',
+      'Picker',
+      'CheckBox',
+      'Touchable',
+    ],
   }),
 ];
 
 module.exports = function () {
   /** @type {import('next').NextConfig} */
   let config = {
-    webpack(webpackConfig) {
-      // for testing prod faster
-      webpackConfig.optimization.minimize = false;
-      return webpackConfig;
-    },
-    modularizeImports: {
-      '@tamagui/lucide-icons': {
-        transform: `@tamagui/lucide-icons/dist/esm/icons/{{kebabCase member}}`,
-        skipDefaultConversion: true,
-      },
-    },
     transpilePackages: [
       'solito',
       'react-native-web',
       'expo-linking',
       'expo-constants',
       'expo-modules-core',
+      'ui',
     ],
-    experimental: {},
+    modularizeImports: {
+      '@tamagui/lucide-icons': {
+        transform: `@tamagui/lucide-icons/dist/esm/icons/{{kebabCase member}}`,
+        skipDefaultConversion: true,
+      },
+    },
+    experimental: {
+      appDir: true,
+    },
   };
 
   for (const plugin of plugins) {
