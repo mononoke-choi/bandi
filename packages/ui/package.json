@@ -19,7 +19,7 @@
     "@types/react-native": "^0.71.5",
     "tsconfig": "*",
     "tsup": "^6.0.1",
-    "typescript": "^5.0.4"
+    "typescript": "^4.9.4"
   },
   "dependencies": {
     "@tamagui/animations-react-native": "^1.15.37",
@@ -34,7 +34,7 @@
     "ms": "^2.1.3",
     "react": "^18.2.0",
     "react-hook-form": "^7.43.9",
-    "react-native": "0.71.7",
+    "react-native": "0.71.6",
     "recoil": "^0.7.7",
     "recoil-sync": "^0.2.0",
     "tamagui": "^1.15.37"
