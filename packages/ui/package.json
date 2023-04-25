@@ -22,12 +22,12 @@
     "typescript": "^4.9.4"
   },
   "dependencies": {
-    "@tamagui/animations-react-native": "^1.15.30",
-    "@tamagui/babel-plugin": "^1.15.30",
-    "@tamagui/config": "^1.15.30",
-    "@tamagui/font-inter": "^1.15.30",
-    "@tamagui/lucide-icons": "^1.15.30",
-    "@tamagui/themes": "^1.15.30",
+    "@tamagui/animations-react-native": "^1.15.37",
+    "@tamagui/babel-plugin": "^1.15.37",
+    "@tamagui/config": "^1.15.37",
+    "@tamagui/font-inter": "^1.15.37",
+    "@tamagui/lucide-icons": "^1.15.37",
+    "@tamagui/themes": "^1.15.37",
     "dayjs": "^1.11.7",
     "eslint-config-custom": "*",
     "lodash": "^4.17.21",
@@ -37,6 +37,6 @@
     "react-native": "0.71.6",
     "recoil": "^0.7.7",
     "recoil-sync": "^0.2.0",
-    "tamagui": "^1.15.30"
+    "tamagui": "^1.15.37"
   }
 }

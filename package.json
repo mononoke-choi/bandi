@@ -16,8 +16,8 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "check-dependency-version-consistency": "latest",
     "@types/prettier": "latest",
+    "check-dependency-version-consistency": "latest",
     "eslint-config-custom": "*",
     "prettier": "latest",
     "turbo": "1.9.1",

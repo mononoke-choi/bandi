@@ -10,8 +10,8 @@
     "clean": "rm -rf .next .tamagui"
   },
   "dependencies": {
-    "@tamagui/next-plugin": "^1.15.30",
-    "@tamagui/next-theme": "^1.15.30",
+    "@tamagui/next-plugin": "^1.15.37",
+    "@tamagui/next-theme": "^1.15.37",
     "api": "*",
     "eslint-config-custom": "*",
     "next": "^13.2.4",
@@ -22,7 +22,7 @@
     "react-native-web-lite": "1.15.14",
     "safe-compare": "^1.1.4",
     "solito": "^3.2.0",
-    "tamagui": "^1.15.30",
+    "tamagui": "^1.15.37",
     "ui": "*"
   },
   "devDependencies": {
