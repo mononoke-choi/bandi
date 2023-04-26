@@ -6,9 +6,13 @@ import { NextThemeProvider, useRootTheme } from '@tamagui/next-theme';
 // eslint-disable-next-line @next/next/no-document-import-in-page
 import { Main } from 'next/document';
 import { useServerInsertedHTML } from 'next/navigation';
-import React, { ReactNode, startTransition } from 'react';
+import React, { cloneElement, ReactNode, startTransition } from 'react';
 import { AppRegistry } from 'react-native';
-import { createTamagui, TamaguiProvider as TamaguiProviderOG } from 'tamagui';
+import {
+  createTamagui,
+  Stack,
+  TamaguiProvider as TamaguiProviderOG,
+} from 'tamagui';
 import '@tamagui/polyfill-dev';
 
 interface ProviderProps {
@@ -28,7 +32,9 @@ export default function Provider({ children }: ProviderProps) {
   // @ts-ignore
   const { getStyleElement } = AppRegistry.getApplication('Main');
 
-  useServerInsertedHTML(() => getStyleElement());
+  useServerInsertedHTML(() =>
+    cloneElement(getStyleElement(), { key: 'react-native-stylesheet' }),
+  );
   useServerInsertedHTML(() => (
     <style
       key="tamagui-css"
@@ -49,7 +55,9 @@ export default function Provider({ children }: ProviderProps) {
         themeClassNameOnRoot
         defaultTheme={theme}
       >
-        {children}
+        <Stack backgroundColor="$gray3" width="100%">
+          {children}
+        </Stack>
       </TamaguiProviderOG>
     </NextThemeProvider>
   );

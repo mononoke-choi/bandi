@@ -1,50 +1,57 @@
 import { Tabs } from 'expo-router';
+import { useTheme } from 'tamagui';
 import { ACTIVE_TINT_COLOR } from 'ui/config/constant';
 import IndexTabBarHeaderRight from 'ui/src/layout/tabBar';
 import {
-  MyPageTabBarIcon,
-  IndexTabBarIcon,
-  ChatTabBarIcon,
-  CrewTabBarIcon,
+  getMyPageTabBarIconOptions,
+  getHomeTabIconOptions,
+  getChatTabBarIconOptions,
+  getCrewTabBarIconOptions,
 } from 'ui/src/layout/tabBar/icons';
 import MyPageTabBarHeaderRight from 'ui/src/layout/tabBar/myPage';
 
 export default function TabLayout() {
+  const theme = useTheme();
+
   return (
     <Tabs
+      sceneContainerStyle={{
+        backgroundColor: theme.gray3.val,
+      }}
       screenOptions={{
         headerTitleAlign: 'left',
         tabBarActiveTintColor: ACTIVE_TINT_COLOR,
+        tabBarStyle: {
+          backgroundColor: theme.gray1.val,
+          borderTopColor: theme.gray5.val,
+          shadowOpacity: 0,
+        },
       }}
     >
       <Tabs.Screen
         name="index"
         options={{
           headerRight: IndexTabBarHeaderRight,
-          tabBarIcon: IndexTabBarIcon,
-          title: 'Home',
+          ...getHomeTabIconOptions(),
         }}
       />
       <Tabs.Screen
         name="crew"
         options={{
-          tabBarIcon: CrewTabBarIcon,
-          title: 'Members',
+          ...getCrewTabBarIconOptions(),
         }}
       />
       <Tabs.Screen
         name="chat"
         options={{
-          tabBarIcon: ChatTabBarIcon,
-          title: 'Chat',
+          ...getChatTabBarIconOptions(),
         }}
       />
       <Tabs.Screen
         name="myPage"
         options={{
           headerRight: MyPageTabBarHeaderRight,
-          tabBarIcon: MyPageTabBarIcon,
-          title: 'MyPage',
+          ...getMyPageTabBarIconOptions(),
         }}
       />
     </Tabs>

@@ -1,6 +1,8 @@
 import { Inter } from 'next/font/google';
+import BottomNavigation from 'ui/src/primitive/bottomNavigation';
 
 import Provider from './provider';
+import './reset.css';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -16,7 +18,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.variable}>
-        <Provider>{children}</Provider>
+        <Provider>
+          {children}
+          <BottomNavigation />
+        </Provider>
       </body>
     </html>
   );

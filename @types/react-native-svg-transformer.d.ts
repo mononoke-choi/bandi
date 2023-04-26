@@ -4,10 +4,7 @@ declare module '*.svg' {
   import type { SvgProps } from 'react-native-svg';
 
   export type ExtendedSVGProps = SvgProps & {
-    color1?: string;
-    color2?: string;
-    color3?: string;
-    color4?: string;
+    // add your additional custom props
   };
 
   const content: React.FC<ExtendedSVGProps>;

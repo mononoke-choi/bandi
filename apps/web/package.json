@@ -10,6 +10,7 @@
     "clean": "rm -rf .next .tamagui"
   },
   "dependencies": {
+    "@svgr/webpack": "^7.0.0",
     "@tamagui/next-plugin": "^1.15.37",
     "@tamagui/next-theme": "^1.15.37",
     "api": "*",

@@ -55,9 +55,9 @@ Web based on turbo repo
 
 - Web
   - Examples
-    - Svgr usage
+    - ~~Svgr usage~~
     - ~~Migrate to app directory~~
-    - Add app header and bottom navigation for consistent UI between native and web
+    - Add app header and ~~bottom navigation~~ for consistent UI between native and web
     - Solito
     - CSR, SSR, SSG, ISR, On-demand ISR
     - Parallel route
@@ -68,7 +68,7 @@ Web based on turbo repo
   - Cypress
 - Native
   - Examples
-    - Svgr usage
+    - ~~Svgr usage~~
     - Solito
     - Shared element transition
   - Replace async storage with mmkv storage
