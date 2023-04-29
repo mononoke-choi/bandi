@@ -10,6 +10,7 @@ const config = getDefaultConfig(__dirname);
 
 config.transformer = {
   ...config.transformer,
+  unstable_allowRequireContext: true,
   asyncRequireModulePath: require.resolve('@expo/metro-runtime/async-require'),
   babelTransformerPath: require.resolve('react-native-svg-transformer'),
 };

@@ -15,12 +15,6 @@
     "assetBundlePatterns": ["**/*"],
     "backgroundColor": "#ffffff",
     "description": "Digital therapeutics software",
-    "extra": {
-      "router": {
-        "asyncRoutes": "development",
-        "origin": "<YOUR_WEB_URL>.vercel.app"
-      }
-    },
     "icon": "./assets/images/icon.png",
     "ios": {
       "bundleIdentifier": "com.bandi",
@@ -32,7 +26,16 @@
     },
     "name": "Bandi",
     "orientation": "portrait",
-    "plugins": ["expo-notifications"],
+    "plugins": [
+      "expo-notifications",
+      [
+        "expo-router",
+        {
+          "asyncRoutes": "development",
+          "origin": "<YOUR_WEB_URL>.vercel.app"
+        }
+      ]
+    ],
     "primaryColor": "#ffffff",
     "privacy": "unlisted",
     "scheme": "bandi",
