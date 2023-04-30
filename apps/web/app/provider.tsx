@@ -57,6 +57,11 @@ export default function Provider({ children }: ProviderProps) {
       >
         <Stack backgroundColor="$gray3" width="100%">
           {children}
+          <Stack
+            height="$5"
+            key="placeholderOfBottomNavigation"
+            pointerEvents="box-none"
+          />
         </Stack>
       </TamaguiProviderOG>
     </NextThemeProvider>

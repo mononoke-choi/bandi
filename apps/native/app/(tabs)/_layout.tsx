@@ -1,14 +1,14 @@
 import { Tabs } from 'expo-router';
 import { useTheme } from 'tamagui';
-import { ACTIVE_TINT_COLOR } from 'ui/config/constant';
-import IndexTabBarHeaderRight from 'ui/src/layout/tabBar';
+import { ACTIVE_TINT_COLOR, HEADER_EDGE_SPACE_TOKEN } from 'ui/config/constant';
+import { IndexHeaderRight } from 'ui/src/layout/appHeader';
+import MyPageHeaderRight from 'ui/src/layout/appHeader/myPage';
 import {
   getMyPageTabBarIconOptions,
   getHomeTabIconOptions,
   getChatTabBarIconOptions,
   getCrewTabBarIconOptions,
 } from 'ui/src/layout/tabBar/icons';
-import MyPageTabBarHeaderRight from 'ui/src/layout/tabBar/myPage';
 
 export default function TabLayout() {
   const theme = useTheme();
@@ -19,6 +19,7 @@ export default function TabLayout() {
         backgroundColor: theme.gray3.val,
       }}
       screenOptions={{
+        headerRightContainerStyle: { paddingRight: HEADER_EDGE_SPACE_TOKEN },
         headerTitleAlign: 'left',
         tabBarActiveTintColor: ACTIVE_TINT_COLOR,
         tabBarStyle: {
@@ -31,7 +32,7 @@ export default function TabLayout() {
       <Tabs.Screen
         name="index"
         options={{
-          headerRight: IndexTabBarHeaderRight,
+          headerRight: IndexHeaderRight,
           ...getHomeTabIconOptions(),
         }}
       />
@@ -50,7 +51,7 @@ export default function TabLayout() {
       <Tabs.Screen
         name="myPage"
         options={{
-          headerRight: MyPageTabBarHeaderRight,
+          headerRight: MyPageHeaderRight,
           ...getMyPageTabBarIconOptions(),
         }}
       />

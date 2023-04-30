@@ -7,7 +7,7 @@ import {
   HEADER_ICON_SIZE,
 } from '../../../config/constant';
 
-export default function MyPageTabBarHeaderRight() {
+export default function MyPageHeaderRight() {
   return (
     <Link href="/setting" asChild>
       <Ionicons

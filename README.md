@@ -1,3 +1,4 @@
+
 # Bandi 🐶 (🏗️🏗️ WIP 🏗️🏗️)
 
 This is React Native opinionated boilerplate with Expo-router, Tamagui, Recoil and Next.js supporting Android, iOS and
@@ -57,7 +58,7 @@ Web based on turbo repo
   - Examples
     - ~~Svgr usage~~
     - ~~Migrate to app directory~~
-    - Add app header and ~~bottom navigation~~ for consistent UI between native and web
+    - ~~Add app header and bottom navigation for consistent UI between native and web~~
     - Solito
     - CSR, SSR, SSG, ISR, On-demand ISR
     - Parallel route

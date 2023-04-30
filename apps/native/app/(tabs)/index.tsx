@@ -1,5 +1,5 @@
 import Wip from 'ui/src/template/wip';
 
-export default function TabOneScreen() {
+export default function Home() {
   return <Wip />;
 }
