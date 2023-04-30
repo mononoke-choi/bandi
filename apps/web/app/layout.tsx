@@ -1,4 +1,5 @@
 import { Inter } from 'next/font/google';
+import { ReactNode } from 'react';
 import BottomNavigation from 'ui/src/primitive/bottomNavigation';
 
 import Provider from './provider';
@@ -12,8 +13,10 @@ const inter = Inter({
 
 export default function RootLayout({
   children,
+  modal,
 }: {
-  children: React.ReactNode;
+  children: ReactNode;
+  modal: ReactNode;
 }) {
   return (
     <html lang="en">
@@ -21,6 +24,7 @@ export default function RootLayout({
         <Provider>
           {children}
           <BottomNavigation />
+          {modal}
         </Provider>
       </body>
     </html>

@@ -59,18 +59,18 @@ Web based on turbo repo
     - ~~Svgr usage~~
     - ~~Migrate to app directory~~
     - ~~Add app header and bottom navigation for consistent UI between native and web~~
-    - Solito
+    - ~~Solito~~
     - CSR, SSR, SSG, ISR, On-demand ISR
-    - Parallel route
+    - ~~Parallel route~~
     - Conditional route
-    - Intercepting route
+    - ~~Intercepting route~~
     - Shared element transition
   - Recoil sync
   - Cypress
 - Native
   - Examples
     - ~~Svgr usage~~
-    - Solito
+    - ~~Solito~~
     - Shared element transition
   - Replace async storage with mmkv storage
   - Fix broken detox

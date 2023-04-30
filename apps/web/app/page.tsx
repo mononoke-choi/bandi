@@ -10,7 +10,7 @@ import Wip from 'ui/src/template/wip';
 
 const Title: AppHeaderProps['title'] = styles => <Text {...styles}>Home</Text>;
 const HeaderRight: AppHeaderProps['headerRight'] = () => (
-  <Link href="/crew/notification">
+  <Link href="/notification">
     <AlarmSVG width={HEADER_ICON_SIZE} height={HEADER_ICON_SIZE} />
   </Link>
 );

@@ -2,10 +2,12 @@
 
 import 'client-only';
 import { isFunction } from 'lodash';
+import { useRouter } from 'next/navigation';
 import React, { ComponentProps, ReactNode } from 'react';
-import { Stack, Text, XStack } from 'tamagui';
+import { Button, Stack, Text, XStack } from 'tamagui';
+import ChevronLeftSVG from 'ui/src/assets/chevron-left.svg';
 
-import { ACTIVE_TINT_COLOR } from '../../config/constant';
+import { ACTIVE_TINT_COLOR, HEADER_ICON_SIZE } from '../../config/constant';
 
 export interface AppHeaderProps {
   title?: string | { (props: ComponentProps<typeof Text>): ReactNode };
@@ -51,12 +53,15 @@ export default function AppHeader({
       position="sticky"
       top={0}
       left={0}
+      zIndex={1}
       right={0}
       backgroundColor="$gray1"
       height="$4.5"
       alignItems="center"
       paddingHorizontal="$2.5"
       columnGap="$3"
+      borderBottomColor="$gray5"
+      borderBottomWidth="$1"
     >
       {headerLeft?.({
         pressColor: styles.pressColor,
@@ -76,5 +81,30 @@ export default function AppHeader({
         })}
       </Stack>
     </XStack>
+  );
+}
+
+interface HeaderBackButtonProps {
+  fallbackUrl: string;
+}
+
+export function HeaderBackButton({ fallbackUrl }: HeaderBackButtonProps) {
+  const { back, push } = useRouter();
+
+  return (
+    <Button
+      unstyled
+      onPress={() => {
+        const canGoBack = window.history.length > 2;
+
+        if (canGoBack) {
+          back();
+        } else {
+          push(fallbackUrl);
+        }
+      }}
+    >
+      <ChevronLeftSVG width={HEADER_ICON_SIZE} height={HEADER_ICON_SIZE} />
+    </Button>
   );
 }

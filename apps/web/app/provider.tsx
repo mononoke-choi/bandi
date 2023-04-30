@@ -6,7 +6,12 @@ import { NextThemeProvider, useRootTheme } from '@tamagui/next-theme';
 // eslint-disable-next-line @next/next/no-document-import-in-page
 import { Main } from 'next/document';
 import { useServerInsertedHTML } from 'next/navigation';
-import React, { cloneElement, ReactNode, startTransition } from 'react';
+import React, {
+  cloneElement,
+  ReactNode,
+  startTransition,
+  useEffect,
+} from 'react';
 import { AppRegistry } from 'react-native';
 import {
   createTamagui,
@@ -41,6 +46,12 @@ export default function Provider({ children }: ProviderProps) {
       dangerouslySetInnerHTML={{ __html: tamaguiConfig.getCSS() }}
     />
   ));
+
+  useEffect(function logDevOnlyThemeConfig() {
+    if (process.env['NODE_ENV'] === 'development') {
+      console.log(tamaguiConfig);
+    }
+  }, []);
 
   return (
     <NextThemeProvider

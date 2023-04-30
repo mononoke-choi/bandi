@@ -10,7 +10,7 @@
 
 html {
   display: flex;
-	flex-direction : column;
+  flex-direction: column;
   line-height: 1.15; /* 1 */
   min-height: 100%;
   -webkit-text-size-adjust: 100%; /* 2 */
@@ -25,7 +25,7 @@ html {
 
 body {
   display: flex;
-	flex:1;
+  flex: 1;
   margin: 0;
 }
 
@@ -179,6 +179,13 @@ textarea {
  * Show the overflow in IE.
  * 1. Show the overflow in Edge.
  */
+
+button {
+  background: unset;
+  border: unset;
+  cursor: pointer;
+  padding: unset;
+}
 
 button,
 input {
