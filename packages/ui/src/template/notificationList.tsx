@@ -9,7 +9,7 @@ const DATA = times(3, () => ({
   title: faker.lorem.lines(),
 }));
 
-export default function NotificationList() {
+export default function NotificationListTemplate() {
   return (
     <FlashList
       data={DATA}

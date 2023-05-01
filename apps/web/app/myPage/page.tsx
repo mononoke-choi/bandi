@@ -6,7 +6,7 @@ import { Text } from 'tamagui';
 import { HEADER_ICON_SIZE } from 'ui/config/constant';
 import SettingSVG from 'ui/src/assets/setting.svg';
 import AppHeader, { AppHeaderProps } from 'ui/src/primitive/appHeader';
-import Wip from 'ui/src/template/wip';
+import MyPageTemplate from 'ui/src/template/myPage';
 
 const Title: AppHeaderProps['title'] = styles => (
   <Text {...styles}>MyPage</Text>
@@ -20,7 +20,7 @@ export default function Page() {
   return (
     <>
       <AppHeader title={Title} headerRight={HeaderLeft} />
-      <Wip />
+      <MyPageTemplate />
     </>
   );
 }

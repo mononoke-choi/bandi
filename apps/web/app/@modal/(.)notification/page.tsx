@@ -3,7 +3,7 @@
 import 'client-only';
 import { useEffect, useState } from 'react';
 import { Sheet, Text } from 'tamagui';
-import NotificationList from 'ui/src/template/notificationList';
+import NotificationListTemplate from 'ui/src/template/notificationList';
 
 export default function Page() {
   const [position, setPosition] = useState(0);
@@ -40,7 +40,7 @@ export default function Page() {
           Notification
         </Text>
         <Sheet.ScrollView width="100%" flex={1}>
-          <NotificationList />
+          <NotificationListTemplate />
         </Sheet.ScrollView>
       </Sheet.Frame>
     </Sheet>

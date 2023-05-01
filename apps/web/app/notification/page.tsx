@@ -6,7 +6,7 @@ import AppHeader, {
   AppHeaderProps,
   HeaderBackButton,
 } from 'ui/src/primitive/appHeader';
-import NotificationList from 'ui/src/template/notificationList';
+import NotificationListTemplate from 'ui/src/template/notificationList';
 
 const Title: AppHeaderProps['title'] = styles => (
   <Text {...styles}>Notification</Text>
@@ -19,7 +19,7 @@ export default function Page() {
   return (
     <>
       <AppHeader title={Title} headerLeft={HeaderLeft} />
-      <NotificationList />
+      <NotificationListTemplate />
     </>
   );
 }

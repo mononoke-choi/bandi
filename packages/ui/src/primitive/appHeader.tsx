@@ -60,7 +60,7 @@ export default function AppHeader({
       alignItems="center"
       paddingHorizontal="$2.5"
       columnGap="$3"
-      borderBottomColor="$gray5"
+      borderBottomColor="$gray4"
       borderBottomWidth="$1"
     >
       {headerLeft?.({
