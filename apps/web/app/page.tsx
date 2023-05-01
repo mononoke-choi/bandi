@@ -5,7 +5,7 @@ import { Link } from 'solito/link';
 import { Text } from 'tamagui';
 import { HEADER_ICON_SIZE } from 'ui/config/constant';
 import AlarmSVG from 'ui/src/assets/alarm.svg';
-import AppHeader, { AppHeaderProps } from 'ui/src/primitive/appHeader';
+import AppHeader, { AppHeaderProps } from 'ui/src/block/appHeader.web';
 import Wip from 'ui/src/template/wip';
 
 const Title: AppHeaderProps['title'] = styles => <Text {...styles}>Home</Text>;

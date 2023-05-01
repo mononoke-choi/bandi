@@ -1,6 +1,6 @@
 import { Inter } from 'next/font/google';
 import { ReactNode } from 'react';
-import BottomNavigation from 'ui/src/primitive/bottomNavigation';
+import BottomNavigation from 'ui/src/block/bottomNavigation.web';
 
 import Provider from './provider';
 import './reset.css';

@@ -5,7 +5,7 @@ import { Text } from 'tamagui';
 import AppHeader, {
   AppHeaderProps,
   HeaderBackButton,
-} from 'ui/src/primitive/appHeader';
+} from 'ui/src/block/appHeader.web';
 import SettingTemplate from 'ui/src/template/myPage/setting';
 
 const Title: AppHeaderProps['title'] = styles => (

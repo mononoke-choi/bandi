@@ -5,7 +5,7 @@ import { Text } from 'tamagui';
 import AppHeader, {
   AppHeaderProps,
   HeaderBackButton,
-} from 'ui/src/primitive/appHeader';
+} from 'ui/src/block/appHeader.web';
 import NotificationListTemplate from 'ui/src/template/notificationList';
 
 const Title: AppHeaderProps['title'] = styles => (
