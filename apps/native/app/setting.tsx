@@ -1,5 +1,5 @@
-import Wip from 'ui/src/template/wip';
+import SettingTemplate from 'ui/src/template/myPage/setting';
 
 export default function Setting() {
-  return <Wip />;
+  return <SettingTemplate />;
 }

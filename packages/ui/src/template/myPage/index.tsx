@@ -13,7 +13,7 @@ export default function MyPageTemplate() {
           height="$5"
         />
         <YStack justifyContent="space-around">
-          <Text fontFamily="$body" fontSize={15}>
+          <Text fontFamily="$body" fontSize="$4">
             mononoke.choi
           </Text>
           <XStack alignItems="center">
@@ -23,14 +23,14 @@ export default function MyPageTemplate() {
               color="black"
               style={{ marginLeft: -2 }}
             />
-            <Text fontFamily="$body" fontSize={15}>
+            <Text fontFamily="$body" fontSize="$3">
               seoul
             </Text>
           </XStack>
         </YStack>
       </XStack>
       <XStack gap={10} backgroundColor="#fff" padding="$5">
-        <Text fontFamily="$body">
+        <Text fontFamily="$body" fontSize="$3">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi,
           enim?
         </Text>
