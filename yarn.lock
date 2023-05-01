@@ -3912,15 +3912,15 @@
   dependencies:
     "@tamagui/use-event" "1.21.2"
 
-"@tamagui/normalize-css-color@1.20.7":
-  version "1.20.7"
-  resolved "https://registry.yarnpkg.com/@tamagui/normalize-css-color/-/normalize-css-color-1.20.7.tgz#3e1380b1d79f76de2613050c74621d514b1939de"
-  integrity sha512-Evn0zZvvzeMwZehXjzho65bvjDvytfeKc7lL7VW2nmnFk+MiY4MqnmuDzOzEGQ6J5+QInHgU7pd+rQsd95pKjg==
-
 "@tamagui/normalize-css-color@1.21.2":
   version "1.21.2"
   resolved "https://registry.yarnpkg.com/@tamagui/normalize-css-color/-/normalize-css-color-1.21.2.tgz#f3a71d8b5293fa2676943a10867a8a3ce6138586"
   integrity sha512-z9SC3FSvR/IDvFrGHDVURLcSqBE4InvU9m3fYdEjSF5uTAC7DJr36Aa9DhB5VoXeT6LG04vkoRKjZ29bDkeRAw==
+
+"@tamagui/normalize-css-color@1.22.1":
+  version "1.22.1"
+  resolved "https://registry.yarnpkg.com/@tamagui/normalize-css-color/-/normalize-css-color-1.22.1.tgz#3ed1fab1117947cb4a6cffe4a2c921b296c76ffe"
+  integrity sha512-cy3k7k8gLrZyemLgP185+KH888ZQd2klcB3M7ms1a7baQsKa/D0Qic8hp+QDOoFJ1Q06G90lGpeFbH5LcNr4sA==
 
 "@tamagui/polyfill-dev@1.21.2":
   version "1.21.2"
@@ -4019,25 +4019,25 @@
   resolved "https://registry.yarnpkg.com/@tamagui/react-native-svg/-/react-native-svg-1.21.2.tgz#10bf7d8f342e7c9db3750210a1216488410b0843"
   integrity sha512-rP/6Xf+KMYFu/PMSl4ec9oXesNS+D8vA1qXQWIoAVLNOlT8SNkntlU+GUEyOcgzQzrKe7N00Hmzx7YVJa3IFIA==
 
-"@tamagui/react-native-use-pressable@1.20.7":
-  version "1.20.7"
-  resolved "https://registry.yarnpkg.com/@tamagui/react-native-use-pressable/-/react-native-use-pressable-1.20.7.tgz#42c9c1726738cb779ffd8643685130ef0efd8780"
-  integrity sha512-Es71Q7h+IW4CacKu/yfqU3283/Fh+i82U0vjZ7xN4zAKWhULjWwH5oFH6eJ6dwu4IbEP/oq5GPvqKmhLIPdIrA==
-
 "@tamagui/react-native-use-pressable@1.21.2":
   version "1.21.2"
   resolved "https://registry.yarnpkg.com/@tamagui/react-native-use-pressable/-/react-native-use-pressable-1.21.2.tgz#bc2603371edb132de13eaa3601bfd52c81c8ea1b"
   integrity sha512-cJnwOt8q/iDYmDglSEP5IA719H4Iw9uebxKRq9LdwJWtZ+uRK+U7KLhcHpD1BIfCYsHyNbzUy6qNQR++YYLtwg==
 
-"@tamagui/react-native-use-responder-events@1.20.7":
-  version "1.20.7"
-  resolved "https://registry.yarnpkg.com/@tamagui/react-native-use-responder-events/-/react-native-use-responder-events-1.20.7.tgz#85116680c461e07584a58aa1c5a7e5c22ad8446a"
-  integrity sha512-VeESP3RDL1kt6G9FHHH2EYPJ1go9jxbuHD8ipkN7p/nq4I6hbE+jkYuYZS4wCZqJv6qvskZ9SB5z02LSDWCQKA==
+"@tamagui/react-native-use-pressable@1.22.1":
+  version "1.22.1"
+  resolved "https://registry.yarnpkg.com/@tamagui/react-native-use-pressable/-/react-native-use-pressable-1.22.1.tgz#338782093cd001447bfbf90c19a90021da0197ca"
+  integrity sha512-LoMHESYbbo4wBCEF/PxaYxPsIjSuwGau1CCSWIPTS3ZofijednZc6I0cpKcNlMG/972Z5bdMweS9SryzwdNLbw==
 
 "@tamagui/react-native-use-responder-events@1.21.2":
   version "1.21.2"
   resolved "https://registry.yarnpkg.com/@tamagui/react-native-use-responder-events/-/react-native-use-responder-events-1.21.2.tgz#cde2ef79f3d580bb1675daa867bfe4b6d460dabd"
   integrity sha512-NOxHp4bYvMyE0f5mJq9fE+VZ81JQQaagi5FVhKRCsJvPimYU3RATWcyufeT5UFfYDbGP3WABGsRmz54zFQiLfA==
+
+"@tamagui/react-native-use-responder-events@1.22.1":
+  version "1.22.1"
+  resolved "https://registry.yarnpkg.com/@tamagui/react-native-use-responder-events/-/react-native-use-responder-events-1.22.1.tgz#f9ef84bcc4b279cf537d73191255685439b1d3d4"
+  integrity sha512-wWSPx7GOT+u5SIZlHpai2KVhW+kJ1qd8pLPYByrJb4gXrQQUKDJ+n+8U6t0mzPkifbBeZK6OcZGrUSri1RpymQ==
 
 "@tamagui/remove-scroll@1.21.2":
   version "1.21.2"
@@ -4128,15 +4128,15 @@
   resolved "https://registry.yarnpkg.com/@tamagui/shorthands/-/shorthands-1.21.2.tgz#da2a997bd709998f8edf709525a5d1b1dd844402"
   integrity sha512-/gh68elqTCTH34ZGr+gPUJ4VQ1r9WeQzQ4OeL77ZffZCoV8tdVvQi7qJ/Aq4dtcMKiCxyIF/qRpxWw280XnPjg==
 
-"@tamagui/simple-hash@1.20.7":
-  version "1.20.7"
-  resolved "https://registry.yarnpkg.com/@tamagui/simple-hash/-/simple-hash-1.20.7.tgz#e24008134bf5386e0e68c948e17287c1c4fc0fbb"
-  integrity sha512-8z3RUJhsmPr6X9vVCWoAf0kWr1U/MmXyDRHrbxL3W2hdA4zYUyCcny/QB9jDPDoW/ZBhrTdIarL621NqqeUzSg==
-
 "@tamagui/simple-hash@1.21.2":
   version "1.21.2"
   resolved "https://registry.yarnpkg.com/@tamagui/simple-hash/-/simple-hash-1.21.2.tgz#64f31e45125609a9f69aaca2d29ada83a6f00238"
   integrity sha512-ZyUF2xqPQvbFqYLUJdoFfwmcjzBHvVr2+sI1vchJLZbWr7lGeaRaNoCVhLddPlnS3FnkYPJ9BNOR+njBRQNt9Q==
+
+"@tamagui/simple-hash@1.22.1":
+  version "1.22.1"
+  resolved "https://registry.yarnpkg.com/@tamagui/simple-hash/-/simple-hash-1.22.1.tgz#cf18830d9dd728355b384e4905b306e5aaac4593"
+  integrity sha512-otiIjw7xdp9AKeM+9tiYsnSRf/7N0U29/LbCjjjvosiGViLYuiDnLBo1jENBlbjuoOAUJqWRtfuQG2Jd+HMhKg==
 
 "@tamagui/slider@1.21.2":
   version "1.21.2"
@@ -12944,17 +12944,6 @@ react-native-svg@13.4.0:
     css-select "^5.1.0"
     css-tree "^1.1.3"
 
-react-native-web-internals@1.20.7:
-  version "1.20.7"
-  resolved "https://registry.yarnpkg.com/react-native-web-internals/-/react-native-web-internals-1.20.7.tgz#22a6f228e73af45e66dda735a2dd8fa00b547424"
-  integrity sha512-IqXuL0JCCzq4ILjeAPuvPNpfF5HHOYKx6vqaCHe7kEXp/RuxjROHZV293hltL2G7YuH99PrW27cA8g0tduo2SQ==
-  dependencies:
-    "@tamagui/normalize-css-color" "1.20.7"
-    "@tamagui/react-native-use-pressable" "1.20.7"
-    "@tamagui/react-native-use-responder-events" "1.20.7"
-    "@tamagui/simple-hash" "1.20.7"
-    styleq "^0.1.2"
-
 react-native-web-internals@1.21.2:
   version "1.21.2"
   resolved "https://registry.yarnpkg.com/react-native-web-internals/-/react-native-web-internals-1.21.2.tgz#9e78b992042f815e4a68c36d8f11f21ae953341c"
@@ -12966,14 +12955,15 @@ react-native-web-internals@1.21.2:
     "@tamagui/simple-hash" "1.21.2"
     styleq "^0.1.2"
 
-react-native-web-lite@1.20.7:
-  version "1.20.7"
-  resolved "https://registry.yarnpkg.com/react-native-web-lite/-/react-native-web-lite-1.20.7.tgz#e8abca946360c621962149e273c699248393c712"
-  integrity sha512-2hZm2yHoFznKe2Zp5Z15pZRzbB8HeH6c6IssAkJwmc+gWG75GYBgjZoQHy41ar2Cl2Z8IUnAH6vMGOyiywMNXg==
+react-native-web-internals@1.22.1:
+  version "1.22.1"
+  resolved "https://registry.yarnpkg.com/react-native-web-internals/-/react-native-web-internals-1.22.1.tgz#38f8f0ff88fab83eeafaf5192d81687755323295"
+  integrity sha512-HbI2ZohDKYu3teMyYn12NT3/y82v98fwsGzycabh1EPgP5YjgSVBbjaMF0XwuhRECrehALAfIWoSRlixH0QFDg==
   dependencies:
-    "@tamagui/normalize-css-color" "1.20.7"
-    invariant "^2.2.4"
-    react-native-web-internals "1.20.7"
+    "@tamagui/normalize-css-color" "1.22.1"
+    "@tamagui/react-native-use-pressable" "1.22.1"
+    "@tamagui/react-native-use-responder-events" "1.22.1"
+    "@tamagui/simple-hash" "1.22.1"
     styleq "^0.1.2"
 
 react-native-web-lite@1.21.2:
@@ -12984,6 +12974,16 @@ react-native-web-lite@1.21.2:
     "@tamagui/normalize-css-color" "1.21.2"
     invariant "^2.2.4"
     react-native-web-internals "1.21.2"
+    styleq "^0.1.2"
+
+react-native-web-lite@1.22.1:
+  version "1.22.1"
+  resolved "https://registry.yarnpkg.com/react-native-web-lite/-/react-native-web-lite-1.22.1.tgz#04ae873256e0cecddedfcd4f7bd7293f6aa4943d"
+  integrity sha512-rgyOO5QW7GX0PX6KHjIQtP46K4g2LENCdvyw2FKxNAvx+ahWPu/tcNjFjzeMaK992xBVvTa7JDkDs9ZSTEKDIA==
+  dependencies:
+    "@tamagui/normalize-css-color" "1.22.1"
+    invariant "^2.2.4"
+    react-native-web-internals "1.22.1"
     styleq "^0.1.2"
 
 react-native-web@^0.18.10, react-native-web@~0.18.10:
