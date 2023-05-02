@@ -1,7 +1,8 @@
 
 # Bandi 🐶 (🏗️🏗️ WIP 🏗️🏗️)
 
-This is React Native opinionated boilerplate with Expo-router, Tamagui, Recoil and Next.js supporting Android, iOS and
+This is fullstack React Native opinionated boilerplate with Expo-router, Tamagui, Recoil and Next.js supporting 
+Android, iOS and
 Web based on turbo repo
 
 ## Tech Stack
@@ -15,6 +16,7 @@ Web based on turbo repo
 - [Expo](https://docs.expo.dev/)
 - [Expo Router](https://expo.github.io/router/docs)
 - [AsyncStorage](https://react-native-async-storage.github.io/async-storage/)
+- [FlashList](https://shopify.github.io/flash-list/)
 - [React-native-debugger](https://github.com/jhen0409/react-native-debugger)
 - [Detox](https://wix.github.io/Detox/)
 - [Tamagui](https://tamagui.dev/)
