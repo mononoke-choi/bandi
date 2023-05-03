@@ -1,6 +1,7 @@
 'use client';
 
 import 'client-only';
+
 import { Text } from 'tamagui';
 import AppHeader, {
   AppHeaderProps,
