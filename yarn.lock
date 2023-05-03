@@ -3905,12 +3905,12 @@
     thread-loader "^3.0.4"
     url-loader "^4.1.1"
 
-"@tamagui/next-theme@^1.20.7":
-  version "1.21.2"
-  resolved "https://registry.yarnpkg.com/@tamagui/next-theme/-/next-theme-1.21.2.tgz#1fb7cc68138c2f20e00747ae7745841b92afb4ca"
-  integrity sha512-JmWialyFMNSCIc6X41RhPISSQuGjWARnZQnSeqgW76b6I7g5bJvUOUzkQ8LfQSxXMID+3dxzItKGVeVA6lY2SQ==
+"@tamagui/next-theme@^1.22.9":
+  version "1.22.9"
+  resolved "https://registry.yarnpkg.com/@tamagui/next-theme/-/next-theme-1.22.9.tgz#62911fcfba9966b1d2b7d5ed0b4765751759b99e"
+  integrity sha512-UJpywey1hji2FNYlv6RHlzfrpQX+u+3GTOglxFxhll/1EibiqKW4nj1ps1VxCxMMs26Yp5jFJ1W/lpk0kqS2iw==
   dependencies:
-    "@tamagui/use-event" "1.21.2"
+    "@tamagui/use-event" "1.22.9"
 
 "@tamagui/normalize-css-color@1.20.7":
   version "1.20.7"
@@ -4321,6 +4321,11 @@
   version "1.21.2"
   resolved "https://registry.yarnpkg.com/@tamagui/use-event/-/use-event-1.21.2.tgz#0d0b2b56837ffb80a9f129619e52fc035754ac7c"
   integrity sha512-dwL+Yubr3dd/HZdXnXHXRnlqxyEmDlKP/MKwMKdrJG99TUgcAJboKNzQWG/tEBSrkOAwZ6WnSwTnnFAu55gbWg==
+
+"@tamagui/use-event@1.22.9":
+  version "1.22.9"
+  resolved "https://registry.yarnpkg.com/@tamagui/use-event/-/use-event-1.22.9.tgz#e8384832177594bfcdbbdaba1a4ac2e356e33a8c"
+  integrity sha512-axuyj51Mr2kt/mvG1tJLY9CjMBgXwwAjzp+UXs2GYWHmngsNCETBjX1yC1YBYeC61fC+sWOqGtw1s4abB/4uoA==
 
 "@tamagui/use-force-update@1.21.2":
   version "1.21.2"
