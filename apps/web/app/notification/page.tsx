@@ -1,26 +1,17 @@
-'use client';
+import 'server-only';
 
-import 'client-only';
-
-import { Text } from 'tamagui';
-import AppHeader, {
-  AppHeaderProps,
-  HeaderBackButton,
-} from 'ui/src/block/appHeader.web';
+import { getApiNotifications } from 'api/src';
 import NotificationListTemplate from 'ui/src/template/notificationList';
 
-const Title: AppHeaderProps['title'] = styles => (
-  <Text {...styles}>Notification</Text>
-);
-const HeaderLeft: AppHeaderProps['headerRight'] = () => (
-  <HeaderBackButton fallbackUrl="/"></HeaderBackButton>
-);
+import ClientBoundary from './clientBoundary';
 
-export default function Page() {
+export default async function Page() {
+  const data = await getApiNotifications();
+
   return (
     <>
-      <AppHeader title={Title} headerLeft={HeaderLeft} />
-      <NotificationListTemplate />
+      <ClientBoundary />
+      <NotificationListTemplate data={data} />
     </>
   );
 }

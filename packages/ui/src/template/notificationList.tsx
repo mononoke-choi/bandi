@@ -1,13 +1,16 @@
+'use client';
+
+import 'client-only';
 import React, { ComponentProps } from 'react';
 import { Text, XStack, YStack, Circle } from 'tamagui';
+import { Notification } from 'web/app/api/notifications/notification';
 
 import Windowing from '../block/windowing';
 
-import { data as DATA } from './data.json';
-
-function FixedRow({
+export function FixedRow({
   item,
   isLastItem,
+  isWeb,
   ...rest
 }: {
   item: {
@@ -15,6 +18,7 @@ function FixedRow({
     title: string;
   };
   isLastItem: boolean;
+  isWeb?: boolean;
 } & ComponentProps<typeof XStack>) {
   return (
     <XStack
@@ -23,6 +27,12 @@ function FixedRow({
       borderBottomColor="$gray5"
       borderBottomWidth={isLastItem ? '$0' : '$1'}
       space="$2.5"
+      {...(isWeb && {
+        left: 0,
+        position: 'absolute',
+        top: 0,
+        width: '100%',
+      })}
       {...rest}
     >
       <Circle size="$3" backgroundColor="$gray8" />
@@ -43,22 +53,29 @@ function FixedRow({
   );
 }
 
-export default function NotificationListTemplate() {
-  const count = DATA.length;
-  const estimatedItemSize = 100;
+export const ESTIMATED_ITEM_SIZE = 90;
+
+interface NotificationListTemplateProps {
+  data: Notification[];
+}
+
+export default function NotificationListTemplate({
+  data = [],
+}: NotificationListTemplateProps) {
+  const count = data.length;
 
   return (
     <Windowing
-      data={DATA}
+      data={data}
       native={{
-        estimatedItemSize,
+        estimatedItemSize: ESTIMATED_ITEM_SIZE,
         renderItem: ({ item, index }) => (
           <FixedRow item={item} isLastItem={count - 1 === index} />
         ),
       }}
       web={{
         count,
-        estimateSize: () => estimatedItemSize,
+        estimateSize: () => ESTIMATED_ITEM_SIZE,
         renderItem: ({ item, size, start, isLastItem, index }) => (
           <FixedRow
             item={item}
@@ -67,9 +84,7 @@ export default function NotificationListTemplate() {
               height: `${size}px`,
             }}
             y={start}
-            position="absolute"
-            width="100%"
-            left={0}
+            isWeb={true}
           >
             {index}
           </FixedRow>

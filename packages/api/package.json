@@ -7,7 +7,7 @@
   "scripts": {
     "clean": "rm -rf dist",
     "generate:orval:prod": "APP_ENV=production orval --config src/orvalConfig.ts && tsup src/index.ts --dts --minify",
-    "generate:orval:dev": "APP_ENV=development orval --config src/orvalConfig.ts && tsup src/index.ts --dts",
+    "generate:orval:dev": "APP_ENV=development orval --config src/orvalConfig.ts && tsup src/index.ts --dts --watch",
     "lint": "eslint . --fix"
   },
   "devDependencies": {

@@ -1,4 +1,4 @@
-import Constants from 'expo-constants';
+import { getBaseUrl } from 'web/service/getBaseUrl';
 
 type CustomClient = {
   url: string;
@@ -14,21 +14,16 @@ const customClient = async <ResponseType>(
   { url, method, params, headers, signal, data }: CustomClient,
   nextConfig: RequestInit['next'],
 ): Promise<ResponseType> => {
-  const response = await fetch(
-    (Constants.expoConfig?.extra?.API_END_POINT ?? '') +
-      url +
-      '?' +
-      new URLSearchParams(params),
-    {
-      headers: {
-        ...headers,
-      },
-      method,
-      next: nextConfig,
-      signal,
-      ...(data ? { body: JSON.stringify(data) } : {}),
+  const searchParams = params ? `?${new URLSearchParams(params)}` : '';
+  const response = await fetch(getBaseUrl() + url + searchParams, {
+    headers: {
+      ...headers,
     },
-  );
+    method,
+    next: nextConfig,
+    signal,
+    ...(data ? { body: JSON.stringify(data) } : {}),
+  });
 
   if (response.ok) {
     return await response.json();
