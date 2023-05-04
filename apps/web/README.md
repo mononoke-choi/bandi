@@ -1,1 +1,1 @@
-# Available commands
+# [Web] Available commands

@@ -1,4 +1,4 @@
-# Available commands
+# [Api] Available commands
 
 # Troubleshooting
 
