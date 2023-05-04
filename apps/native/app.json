@@ -14,7 +14,7 @@
     },
     "assetBundlePatterns": ["**/*"],
     "backgroundColor": "#ffffff",
-    "description": "Digital therapeutics software",
+    "description": "New RN starter kit",
     "extra": {
       "router": {
         "asyncRoutes": "development",

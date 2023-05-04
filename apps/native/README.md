@@ -1,25 +1,16 @@
 # Available commands
 
-- postinstall
-- dev
-- start
-- start:all
-- ios:build:local
-- ios:build:eas
-- android:build:local
-- android:build:eas
-- eas:resignADHOC
-- detox:prepare
-- detox:android:debug:build
-- detox:android:debug:test
-- detox:android:release:build
-- detox:android:release:test
-- detox:ios:debug:build
-- detox:ios:debug:test
-- detox:ios:release:build
-- detox:ios:release:test
-- debugger
-- lint
-- clean
-- android
-- ios
+# Troubleshooting
+
+<details>
+<summary>Only Android is failed to request localhost</summary>
+<p>
+
+Use ADB reverse to bind an emulator port to a port on your computer.
+
+```shell
+   adb reverse tcp:3000 tcp:3000
+```
+
+</p>
+</details>
