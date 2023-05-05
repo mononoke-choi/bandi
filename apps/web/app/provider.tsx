@@ -43,7 +43,7 @@ export default function Provider({ children }: ProviderProps) {
   useServerInsertedHTML(() => (
     <style
       key="tamagui-css"
-      dangerouslySetInnerHTML={{ __html: tamaguiConfig.getCSS() }}
+      dangerouslySetInnerHTML={{ __html: tamaguiConfig.getNewCSS() }}
     />
   ));
 
