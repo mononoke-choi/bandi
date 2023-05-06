@@ -51,6 +51,7 @@ yarn-error.log*
 
 # codegen
 __generated__
+!packages/api/src/__generated__/
 .tamagui
 .metro-health-check*
 

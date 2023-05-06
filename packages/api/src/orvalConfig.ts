@@ -8,7 +8,6 @@ defineConfig({
     target: 'http://localhost:3000/api/swagger',
   },
   output: {
-    clean: true,
     mode: 'single',
     override: {
       mutator: {

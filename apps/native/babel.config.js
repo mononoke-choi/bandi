@@ -16,7 +16,7 @@ module.exports = function (api) {
       [
         'transform-inline-environment-variables',
         {
-          include: 'TAMAGUI_TARGET',
+          include: ['TAMAGUI_TARGET', 'APP_ENV'],
         },
       ],
       'react-native-reanimated/plugin',
