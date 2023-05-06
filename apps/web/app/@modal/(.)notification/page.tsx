@@ -1,5 +1,5 @@
 import 'server-only';
-import { getApiNotifications } from 'api/src';
+import { getApiNotifications } from 'api';
 
 import ClientBoundary from './clientBoundary';
 

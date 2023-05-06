@@ -2,10 +2,10 @@ import React from 'react';
 import { Text, Stack, XStack, YStack } from 'tamagui';
 import LocationSVG from 'ui/src/assets/location.svg';
 
-export default function MyPageTemplate() {
+export default function MyPageTopTabHeaderTemplate() {
   return (
     <YStack space={true}>
-      <XStack gap={10} backgroundColor="#fff" padding="$5">
+      <XStack gap={10} backgroundColor="$gray2" padding="$5">
         <Stack
           borderRadius={100}
           backgroundColor="#ddd"
@@ -28,12 +28,6 @@ export default function MyPageTemplate() {
             </Text>
           </XStack>
         </YStack>
-      </XStack>
-      <XStack gap={10} backgroundColor="#fff" padding="$5">
-        <Text fontFamily="$body" fontSize="$3">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi,
-          enim?
-        </Text>
       </XStack>
     </YStack>
   );

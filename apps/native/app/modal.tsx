@@ -1,5 +1,4 @@
-import { getApiNotifications } from 'api';
-import { GetApiNotifications200Item } from 'api/src';
+import { getApiNotifications, GetApiNotifications200Item } from 'api';
 import { Stack } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
 import { useEffect, useState } from 'react';

@@ -4,5 +4,5 @@
   },
   "exclude": ["build", "dist", "node_modules"],
   "extends": "tsconfig/react-native-library",
-  "include": [".", "../../@types/**/*"]
+  "include": [".", "../../@types/**/*", "../../apps/web/.next/types/**/*.ts"]
 }

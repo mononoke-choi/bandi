@@ -4,7 +4,7 @@ import { Link } from 'solito/link';
 import { HEADER_ICON_SIZE } from '../../../config/constant';
 import AlarmSVG from '../../assets/alarm.svg';
 
-export function IndexHeaderRight() {
+export function HomeHeaderRight() {
   return (
     <Link href="/modal">
       <AlarmSVG

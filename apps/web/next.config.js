@@ -71,7 +71,9 @@ module.exports = function () {
       },
     },
     experimental: {
+      serverActions: true,
       appDir: true,
+      typedRoutes: true,
     },
     webpack: config => {
       config.resolve.extensions = [
