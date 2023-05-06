@@ -3930,11 +3930,6 @@
   dependencies:
     "@tamagui/use-event" "1.23.0"
 
-"@tamagui/normalize-css-color@1.20.7":
-  version "1.20.7"
-  resolved "https://registry.yarnpkg.com/@tamagui/normalize-css-color/-/normalize-css-color-1.20.7.tgz#3e1380b1d79f76de2613050c74621d514b1939de"
-  integrity sha512-Evn0zZvvzeMwZehXjzho65bvjDvytfeKc7lL7VW2nmnFk+MiY4MqnmuDzOzEGQ6J5+QInHgU7pd+rQsd95pKjg==
-
 "@tamagui/normalize-css-color@1.23.0":
   version "1.23.0"
   resolved "https://registry.yarnpkg.com/@tamagui/normalize-css-color/-/normalize-css-color-1.23.0.tgz#628f612a4bcfa80607443070721a6fba95a282b2"
@@ -4037,20 +4032,10 @@
   resolved "https://registry.yarnpkg.com/@tamagui/react-native-svg/-/react-native-svg-1.23.0.tgz#743ae33905e43b29c885ba92f1fb97464e709aee"
   integrity sha512-CJgRn4gyXnf/egFnMfV2Z+Uqznq8cZkDLCXtM4tud7QS1SGXLbAa5qT7sy8toTWmsJzYnXrLjUAJWpk/vyfsrA==
 
-"@tamagui/react-native-use-pressable@1.20.7":
-  version "1.20.7"
-  resolved "https://registry.yarnpkg.com/@tamagui/react-native-use-pressable/-/react-native-use-pressable-1.20.7.tgz#42c9c1726738cb779ffd8643685130ef0efd8780"
-  integrity sha512-Es71Q7h+IW4CacKu/yfqU3283/Fh+i82U0vjZ7xN4zAKWhULjWwH5oFH6eJ6dwu4IbEP/oq5GPvqKmhLIPdIrA==
-
 "@tamagui/react-native-use-pressable@1.23.0":
   version "1.23.0"
   resolved "https://registry.yarnpkg.com/@tamagui/react-native-use-pressable/-/react-native-use-pressable-1.23.0.tgz#21f6843a259b98ac5cb43d748b8768cb2974261a"
   integrity sha512-jszfD5bwxIzYHG1nG243GnB7x7WT7TupS5B+Zn+Z9vulPBsP9ag8Fp8S2tgG/T7xtU1XnbEntHEBXUmnvm4i0A==
-
-"@tamagui/react-native-use-responder-events@1.20.7":
-  version "1.20.7"
-  resolved "https://registry.yarnpkg.com/@tamagui/react-native-use-responder-events/-/react-native-use-responder-events-1.20.7.tgz#85116680c461e07584a58aa1c5a7e5c22ad8446a"
-  integrity sha512-VeESP3RDL1kt6G9FHHH2EYPJ1go9jxbuHD8ipkN7p/nq4I6hbE+jkYuYZS4wCZqJv6qvskZ9SB5z02LSDWCQKA==
 
 "@tamagui/react-native-use-responder-events@1.23.0":
   version "1.23.0"
@@ -4145,11 +4130,6 @@
   version "1.23.0"
   resolved "https://registry.yarnpkg.com/@tamagui/shorthands/-/shorthands-1.23.0.tgz#d3ef7eef299b1265757b22dadf206f0b8074a328"
   integrity sha512-3TAFrWNMmZNmszWb8qWxqi+6yNlnvqiDcXZwgVgx3rrNN/0PDQRKdYcdmhHRFh5G6h+/ToCU4M88rgj7zlihtA==
-
-"@tamagui/simple-hash@1.20.7":
-  version "1.20.7"
-  resolved "https://registry.yarnpkg.com/@tamagui/simple-hash/-/simple-hash-1.20.7.tgz#e24008134bf5386e0e68c948e17287c1c4fc0fbb"
-  integrity sha512-8z3RUJhsmPr6X9vVCWoAf0kWr1U/MmXyDRHrbxL3W2hdA4zYUyCcny/QB9jDPDoW/ZBhrTdIarL621NqqeUzSg==
 
 "@tamagui/simple-hash@1.23.0":
   version "1.23.0"
@@ -13098,17 +13078,6 @@ react-native-tab-view@^3.3.0:
   dependencies:
     use-latest-callback "^0.1.5"
 
-react-native-web-internals@1.20.7:
-  version "1.20.7"
-  resolved "https://registry.yarnpkg.com/react-native-web-internals/-/react-native-web-internals-1.20.7.tgz#22a6f228e73af45e66dda735a2dd8fa00b547424"
-  integrity sha512-IqXuL0JCCzq4ILjeAPuvPNpfF5HHOYKx6vqaCHe7kEXp/RuxjROHZV293hltL2G7YuH99PrW27cA8g0tduo2SQ==
-  dependencies:
-    "@tamagui/normalize-css-color" "1.20.7"
-    "@tamagui/react-native-use-pressable" "1.20.7"
-    "@tamagui/react-native-use-responder-events" "1.20.7"
-    "@tamagui/simple-hash" "1.20.7"
-    styleq "^0.1.2"
-
 react-native-web-internals@1.23.0:
   version "1.23.0"
   resolved "https://registry.yarnpkg.com/react-native-web-internals/-/react-native-web-internals-1.23.0.tgz#468b403e72a771c290b51d96926df6314c503d3b"
@@ -13118,16 +13087,6 @@ react-native-web-internals@1.23.0:
     "@tamagui/react-native-use-pressable" "1.23.0"
     "@tamagui/react-native-use-responder-events" "1.23.0"
     "@tamagui/simple-hash" "1.23.0"
-    styleq "^0.1.2"
-
-react-native-web-lite@1.20.7:
-  version "1.20.7"
-  resolved "https://registry.yarnpkg.com/react-native-web-lite/-/react-native-web-lite-1.20.7.tgz#e8abca946360c621962149e273c699248393c712"
-  integrity sha512-2hZm2yHoFznKe2Zp5Z15pZRzbB8HeH6c6IssAkJwmc+gWG75GYBgjZoQHy41ar2Cl2Z8IUnAH6vMGOyiywMNXg==
-  dependencies:
-    "@tamagui/normalize-css-color" "1.20.7"
-    invariant "^2.2.4"
-    react-native-web-internals "1.20.7"
     styleq "^0.1.2"
 
 react-native-web-lite@1.23.0:
