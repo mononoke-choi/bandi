@@ -5,7 +5,7 @@ defineConfig({
     afterAllFilesWrite: 'eslint --fix',
   },
   input: {
-    target: 'http://localhost:3000/api/swagger',
+    target: 'src/__generated__/openapi.json',
   },
   output: {
     mode: 'single',

@@ -1,0 +1,60 @@
+{
+  "info": {
+    "description": "[openapi.json](/api/swagger)",
+    "title": "Bandi Swagger",
+    "version": "0.1.0"
+  },
+  "openapi": "3.0.0",
+  "paths": {
+    "/api/hello": {
+      "get": {
+        "tags": ["sample"],
+        "summary": "greeting",
+        "description": "say hello\n",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": { "message": { "type": "string" } },
+                  "required": ["message"]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/notifications": {
+      "get": {
+        "tags": ["sample"],
+        "summary": "config",
+        "description": "recent notification list\n",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "title": { "type": "string" },
+                      "date": { "type": "string" }
+                    },
+                    "required": ["title", "date"]
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {},
+  "tags": []
+}
