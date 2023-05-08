@@ -1,10 +1,10 @@
-import AsyncStorage from '@react-native-async-storage/async-storage';
 import React, { FC } from 'react';
 import { DefaultValue } from 'recoil';
-import { RecoilSync } from 'recoil-sync';
 import type { RecoilSyncOptions } from 'recoil-sync';
+import { RecoilSync } from 'recoil-sync';
 
 import { STORE_KEY } from '../../config/constant';
+import { MMKVStorage } from '../store/mmkv';
 
 const WithRecoilSync: FC<RecoilSyncOptions> = ({
   children,
@@ -13,8 +13,12 @@ const WithRecoilSync: FC<RecoilSyncOptions> = ({
   return (
     <RecoilSync
       storeKey={STORE_KEY}
-      read={async itemKey => {
-        const gainedValue = await AsyncStorage.getItem(itemKey);
+      read={itemKey => {
+        if (typeof window === 'undefined') {
+          return new DefaultValue();
+        }
+
+        const gainedValue = MMKVStorage.getString(itemKey);
 
         if (gainedValue) {
           return JSON.parse(gainedValue);
@@ -25,7 +29,7 @@ const WithRecoilSync: FC<RecoilSyncOptions> = ({
       write={({ diff }) => {
         for (const [key, value] of diff) {
           try {
-            AsyncStorage.setItem(key, JSON.stringify(value));
+            MMKVStorage.set(key, JSON.stringify(value));
           } catch (error) {
             console.error(error);
           }
