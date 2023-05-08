@@ -13,12 +13,14 @@ import React, {
   useEffect,
 } from 'react';
 import { AppRegistry } from 'react-native';
+import { RecoilRoot } from 'recoil';
 import {
   createTamagui,
   Stack,
   TamaguiProvider as TamaguiProviderOG,
 } from 'tamagui';
 import '@tamagui/polyfill-dev';
+import { WithRecoilSync } from 'ui/src/HOC/withRecoilSync';
 
 interface ProviderProps {
   children: ReactNode;
@@ -49,7 +51,7 @@ export default function Provider({ children }: ProviderProps) {
 
   useEffect(function logDevOnlyThemeConfig() {
     if (process.env['NODE_ENV'] === 'development') {
-      console.log(tamaguiConfig);
+      console.log('tamaguiConfig', tamaguiConfig);
     }
   }, []);
 
@@ -66,15 +68,19 @@ export default function Provider({ children }: ProviderProps) {
         themeClassNameOnRoot
         defaultTheme={theme}
       >
-        <Stack backgroundColor="$gray3" width="100%">
-          {children}
-          {/* todo get height from theme tokens */}
-          <Stack
-            height="$5"
-            key="placeholderOfBottomNavigation"
-            pointerEvents="box-none"
-          />
-        </Stack>
+        <RecoilRoot>
+          <WithRecoilSync>
+            <Stack backgroundColor="$gray3" width="100%">
+              {children}
+              {/* todo get height from theme tokens */}
+              <Stack
+                height="$5"
+                key="placeholderOfBottomNavigation"
+                pointerEvents="box-none"
+              />
+            </Stack>
+          </WithRecoilSync>
+        </RecoilRoot>
       </TamaguiProviderOG>
     </NextThemeProvider>
   );

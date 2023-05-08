@@ -26,7 +26,6 @@ const userInfoState = atom<UserInfoState | null | undefined>({
         }),
       ),
       storeKey: STORE_KEY,
-      syncDefault: true,
     }),
   ],
   key: 'userInfo',

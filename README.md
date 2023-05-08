@@ -70,7 +70,7 @@ Android, iOS and Web based on turbo repo
     - Conditional route
     - ~~Intercepting route~~
     - Shared element transition
-  - Recoil sync
+  - ~~Recoil sync~~
   - Cypress
 - Native
   - Examples
