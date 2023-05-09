@@ -70,7 +70,7 @@ export default function Provider({ children }: ProviderProps) {
       >
         <RecoilRoot>
           <WithRecoilSync>
-            <Stack backgroundColor="$gray3" width="100%">
+            <Stack width="100%">
               {children}
               {/* todo get height from theme tokens */}
               <Stack

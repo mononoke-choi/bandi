@@ -20,7 +20,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.variable}>
+      <body
+        className={inter.variable}
+        style={{ backgroundColor: 'var(--gray3)' }}
+      >
         <Provider>
           {children}
           <BottomNavigation />

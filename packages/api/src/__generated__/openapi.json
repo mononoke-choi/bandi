@@ -29,7 +29,7 @@
     },
     "/api/notifications": {
       "get": {
-        "tags": ["sample"],
+        "tags": ["config"],
         "summary": "config",
         "description": "recent notification list\n",
         "responses": {
@@ -46,6 +46,42 @@
                       "date": { "type": "string" }
                     },
                     "required": ["title", "date"]
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/posts": {
+      "get": {
+        "tags": ["post"],
+        "summary": "post",
+        "description": "recent post list\n",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "description": { "type": "string" },
+                      "img": { "type": "string" },
+                      "meta": {
+                        "type": "object",
+                        "properties": {
+                          "createdAt": { "type": "string" },
+                          "location": { "type": "string" }
+                        },
+                        "required": ["createdAt", "location"]
+                      },
+                      "title": { "type": "string" }
+                    },
+                    "required": ["description", "img", "meta", "title"]
                   }
                 }
               }

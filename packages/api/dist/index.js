@@ -21,7 +21,8 @@ var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: tru
 var src_exports = {};
 __export(src_exports, {
   getApiHello: () => getApiHello,
-  getApiNotifications: () => getApiNotifications
+  getApiNotifications: () => getApiNotifications,
+  getApiPosts: () => getApiPosts
 });
 module.exports = __toCommonJS(src_exports);
 
@@ -81,8 +82,15 @@ var getApiNotifications = (options) => {
     options
   );
 };
+var getApiPosts = (options) => {
+  return customClient(
+    { url: `/api/posts`, method: "get" },
+    options
+  );
+};
 // Annotate the CommonJS export names for ESM import in node:
 0 && (module.exports = {
   getApiHello,
-  getApiNotifications
+  getApiNotifications,
+  getApiPosts
 });

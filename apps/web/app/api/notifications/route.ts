@@ -11,7 +11,7 @@ import { Notification } from './notification';
  *  /api/notifications:
  *    get:
  *      tags:
- *        - sample
+ *        - config
  *      summary: config
  *      description: >
  *        recent notification list
@@ -35,7 +35,7 @@ import { Notification } from './notification';
  */
 export async function GET() {
   const dataDir = join(process.cwd(), '/public/notifications.json');
-  const jsonString = await readFileSync(dataDir, 'utf8');
+  const jsonString = readFileSync(dataDir, 'utf8');
   const { data } = JSON.parse(jsonString) as {
     data: Notification[];
   };

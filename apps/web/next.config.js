@@ -56,6 +56,14 @@ const addSVGRModuleRule = config => {
 module.exports = function () {
   /** @type {import('next').NextConfig} */
   let nextConfig = {
+    images: {
+      remotePatterns: [
+        {
+          protocol: 'https',
+          hostname: 'loremflickr.com',
+        },
+      ],
+    },
     transpilePackages: [
       'solito',
       'react-native-web',
