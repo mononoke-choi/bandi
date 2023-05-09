@@ -1,5 +1,9 @@
 # [Api] Available commands
 
+# Swagger UI
+After running local server, if you type [http://localhost:3000/swagger](http://localhost:3000/swagger) URL in 
+browser you could see swagger page
+
 # Troubleshooting
 
 <details>

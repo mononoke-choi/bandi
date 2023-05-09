@@ -72,7 +72,6 @@ export default function Provider({ children }: ProviderProps) {
           <WithRecoilSync>
             <Stack width="100%">
               {children}
-              {/* todo get height from theme tokens */}
               <Stack
                 height="$5"
                 key="placeholderOfBottomNavigation"

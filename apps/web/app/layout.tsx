@@ -1,9 +1,7 @@
 import { Inter } from 'next/font/google';
 import { ReactNode } from 'react';
-import BottomNavigation from 'ui/src/block/bottomNavigation.web';
 
-import Provider from './provider';
-import './reset.css';
+import './(app)/reset.css';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -13,7 +11,6 @@ const inter = Inter({
 
 export default function RootLayout({
   children,
-  modal,
 }: {
   children: ReactNode;
   modal: ReactNode;
@@ -24,11 +21,7 @@ export default function RootLayout({
         className={inter.variable}
         style={{ backgroundColor: 'var(--gray3)' }}
       >
-        <Provider>
-          {children}
-          <BottomNavigation />
-          {modal}
-        </Provider>
+        {children}
       </body>
     </html>
   );
