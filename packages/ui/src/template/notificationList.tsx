@@ -1,22 +1,19 @@
 'use client';
-
 import 'client-only';
 import React, { ComponentProps } from 'react';
-import { Text, XStack, YStack, Circle } from 'tamagui';
+import { Text, XStack, YStack, Stack } from 'tamagui';
 import { Notification } from 'web/app/api/notifications/notification';
 
+import Image from '../block/image/image';
 import Windowing from '../block/windowing';
 
+const SENDER_IMAGE_SIZE = 40;
 export function FixedRow({
   item,
   isLastItem,
   isWeb,
   ...rest
-}: {
-  item: {
-    date: string;
-    title: string;
-  };
+}: { item: Notification } & {
   isLastItem: boolean;
   isWeb?: boolean;
 } & ComponentProps<typeof XStack>) {
@@ -35,7 +32,29 @@ export function FixedRow({
       })}
       {...rest}
     >
-      <Circle size="$3" backgroundColor="$gray8" />
+      <Stack
+        borderRadius="$20"
+        overflow="hidden"
+        flexShrink={0}
+        alignSelf="center"
+      >
+        <Image
+          web={{
+            alt: 'Random sport faker image',
+            height: SENDER_IMAGE_SIZE,
+            src: item.img,
+            unoptimized: true,
+            width: SENDER_IMAGE_SIZE,
+          }}
+          native={{
+            source: {
+              height: SENDER_IMAGE_SIZE,
+              uri: item.img,
+              width: SENDER_IMAGE_SIZE,
+            },
+          }}
+        />
+      </Stack>
       <YStack space="$2" flex={1}>
         <Text
           fontFamily="$body"
