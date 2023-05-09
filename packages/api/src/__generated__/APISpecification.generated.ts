@@ -6,7 +6,6 @@
  * OpenAPI spec version: 0.1.0
  */
 import { customClient } from '../mutator';
-
 export type GetApiPosts200ItemMeta = {
   createdAt: string;
   location: string;

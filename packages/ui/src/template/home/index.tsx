@@ -42,7 +42,7 @@ function FixedRow({
       <Stack borderRadius="$4" overflow="hidden">
         <Image
           web={{
-            alt: 'Random sport faker image',
+            alt: 'Random animal faker image',
             height: POST_IMAGE_SIZE,
             src: item.img,
             unoptimized: true,

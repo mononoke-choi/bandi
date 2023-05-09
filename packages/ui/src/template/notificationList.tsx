@@ -40,7 +40,7 @@ export function FixedRow({
       >
         <Image
           web={{
-            alt: 'Random sport faker image',
+            alt: 'Random people faker image',
             height: SENDER_IMAGE_SIZE,
             src: item.img,
             unoptimized: true,

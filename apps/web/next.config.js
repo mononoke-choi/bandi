@@ -62,6 +62,10 @@ module.exports = function () {
           protocol: 'https',
           hostname: 'loremflickr.com',
         },
+        {
+          protocol: 'https',
+          hostname: 'i.pravatar.cc',
+        },
       ],
     },
     transpilePackages: [
