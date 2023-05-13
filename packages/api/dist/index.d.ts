@@ -18,15 +18,15 @@ type BodyType<BodyData> = BodyData;
  * OpenAPI spec version: 0.1.0
  */
 
-type GetApiPosts200ItemMeta = {
+type GetApiPost200ItemMeta = {
     createdAt: string;
     location: string;
 };
-type GetApiPosts200Item = {
+type GetApiPost200Item = {
     id: string;
     description: string;
     img: string;
-    meta: GetApiPosts200ItemMeta;
+    meta: GetApiPost200ItemMeta;
     title: string;
 };
 type GetApiPostPostId200Meta = {
@@ -72,10 +72,10 @@ declare const getApiPostPostId: (postId: string, options?: SecondParameter<typeo
 
  * @summary post
  */
-declare const getApiPosts: (options?: SecondParameter<typeof customClient>) => Promise<GetApiPosts200Item[]>;
+declare const getApiPost: (options?: SecondParameter<typeof customClient>) => Promise<GetApiPost200Item[]>;
 type GetApiHelloResult = NonNullable<Awaited<ReturnType<typeof getApiHello>>>;
 type GetApiNotificationsResult = NonNullable<Awaited<ReturnType<typeof getApiNotifications>>>;
 type GetApiPostPostIdResult = NonNullable<Awaited<ReturnType<typeof getApiPostPostId>>>;
-type GetApiPostsResult = NonNullable<Awaited<ReturnType<typeof getApiPosts>>>;
+type GetApiPostResult = NonNullable<Awaited<ReturnType<typeof getApiPost>>>;
 
-export { GetApiHello200, GetApiHelloResult, GetApiNotifications200Item, GetApiNotificationsResult, GetApiPostPostId200, GetApiPostPostId200Meta, GetApiPostPostIdResult, GetApiPosts200Item, GetApiPosts200ItemMeta, GetApiPostsResult, getApiHello, getApiNotifications, getApiPostPostId, getApiPosts };
+export { GetApiHello200, GetApiHelloResult, GetApiNotifications200Item, GetApiNotificationsResult, GetApiPost200Item, GetApiPost200ItemMeta, GetApiPostPostId200, GetApiPostPostId200Meta, GetApiPostPostIdResult, GetApiPostResult, getApiHello, getApiNotifications, getApiPost, getApiPostPostId };

@@ -1,7 +1,7 @@
 'use client';
 
 import 'client-only';
-import { GetApiPostsResult, GetApiPosts200Item } from 'api';
+import { GetApiPostResult, GetApiPost200Item } from 'api';
 import React, { ComponentProps } from 'react';
 import { Platform, Image as ReactNativeImage } from 'react-native';
 import Animated from 'react-native-reanimated';
@@ -23,7 +23,7 @@ function FixedRow({
   href,
   ...rest
 }: {
-  item: GetApiPosts200Item;
+  item: GetApiPost200Item;
 } & {
   isLastItem: boolean;
   isWeb?: boolean;
@@ -138,7 +138,7 @@ function FixedRow({
 
 const ESTIMATED_ITEM_SIZE = 120;
 interface HomeTemplateProps {
-  data: GetApiPostsResult;
+  data: GetApiPostResult;
 }
 export default function HomeTemplate({ data }: HomeTemplateProps) {
   const count = data.length;
