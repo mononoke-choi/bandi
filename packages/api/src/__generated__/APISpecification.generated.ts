@@ -6,16 +6,16 @@
  * OpenAPI spec version: 0.1.0
  */
 import { customClient } from '../mutator';
-export type GetApiPosts200ItemMeta = {
+export type GetApiPost200ItemMeta = {
   createdAt: string;
   location: string;
 };
 
-export type GetApiPosts200Item = {
+export type GetApiPost200Item = {
   id: string;
   description: string;
   img: string;
-  meta: GetApiPosts200ItemMeta;
+  meta: GetApiPost200ItemMeta;
   title: string;
 };
 
@@ -96,9 +96,9 @@ export const getApiPostPostId = (
 
  * @summary post
  */
-export const getApiPosts = (options?: SecondParameter<typeof customClient>) => {
-  return customClient<GetApiPosts200Item[]>(
-    { url: `/api/posts`, method: 'get' },
+export const getApiPost = (options?: SecondParameter<typeof customClient>) => {
+  return customClient<GetApiPost200Item[]>(
+    { url: `/api/post`, method: 'get' },
     options,
   );
 };
@@ -112,6 +112,6 @@ export type GetApiNotificationsResult = NonNullable<
 export type GetApiPostPostIdResult = NonNullable<
   Awaited<ReturnType<typeof getApiPostPostId>>
 >;
-export type GetApiPostsResult = NonNullable<
-  Awaited<ReturnType<typeof getApiPosts>>
+export type GetApiPostResult = NonNullable<
+  Awaited<ReturnType<typeof getApiPost>>
 >;
