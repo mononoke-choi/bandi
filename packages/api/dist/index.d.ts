@@ -23,14 +23,27 @@ type GetApiPosts200ItemMeta = {
     location: string;
 };
 type GetApiPosts200Item = {
+    id: string;
     description: string;
     img: string;
     meta: GetApiPosts200ItemMeta;
     title: string;
 };
+type GetApiPostPostId200Meta = {
+    createdAt: string;
+    location: string;
+};
+type GetApiPostPostId200 = {
+    id: string;
+    description: string;
+    img: string;
+    meta: GetApiPostPostId200Meta;
+    title: string;
+};
 type GetApiNotifications200Item = {
     title: string;
     date: string;
+    img: string;
 };
 type GetApiHello200 = {
     message: string;
@@ -49,6 +62,12 @@ declare const getApiHello: (options?: SecondParameter<typeof customClient>) => P
  */
 declare const getApiNotifications: (options?: SecondParameter<typeof customClient>) => Promise<GetApiNotifications200Item[]>;
 /**
+ * post detail
+
+ * @summary post
+ */
+declare const getApiPostPostId: (postId: string, options?: SecondParameter<typeof customClient>) => Promise<GetApiPostPostId200>;
+/**
  * recent post list
 
  * @summary post
@@ -56,6 +75,7 @@ declare const getApiNotifications: (options?: SecondParameter<typeof customClien
 declare const getApiPosts: (options?: SecondParameter<typeof customClient>) => Promise<GetApiPosts200Item[]>;
 type GetApiHelloResult = NonNullable<Awaited<ReturnType<typeof getApiHello>>>;
 type GetApiNotificationsResult = NonNullable<Awaited<ReturnType<typeof getApiNotifications>>>;
+type GetApiPostPostIdResult = NonNullable<Awaited<ReturnType<typeof getApiPostPostId>>>;
 type GetApiPostsResult = NonNullable<Awaited<ReturnType<typeof getApiPosts>>>;
 
-export { GetApiHello200, GetApiHelloResult, GetApiNotifications200Item, GetApiNotificationsResult, GetApiPosts200Item, GetApiPosts200ItemMeta, GetApiPostsResult, getApiHello, getApiNotifications, getApiPosts };
+export { GetApiHello200, GetApiHelloResult, GetApiNotifications200Item, GetApiNotificationsResult, GetApiPostPostId200, GetApiPostPostId200Meta, GetApiPostPostIdResult, GetApiPosts200Item, GetApiPosts200ItemMeta, GetApiPostsResult, getApiHello, getApiNotifications, getApiPostPostId, getApiPosts };

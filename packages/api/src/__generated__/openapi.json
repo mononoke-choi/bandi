@@ -43,10 +43,54 @@
                     "type": "object",
                     "properties": {
                       "title": { "type": "string" },
-                      "date": { "type": "string" }
+                      "date": { "type": "string" },
+                      "img": { "type": "string" }
                     },
-                    "required": ["title", "date"]
+                    "required": ["title", "date", "img"]
                   }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/post/{postId}": {
+      "get": {
+        "tags": ["post"],
+        "summary": "post",
+        "description": "post detail\n",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "postId",
+            "required": true,
+            "schema": { "type": "string" },
+            "description": "The post id"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "id": { "type": "string" },
+                    "description": { "type": "string" },
+                    "img": { "type": "string" },
+                    "meta": {
+                      "type": "object",
+                      "properties": {
+                        "createdAt": { "type": "string" },
+                        "location": { "type": "string" }
+                      },
+                      "required": ["createdAt", "location"]
+                    },
+                    "title": { "type": "string" }
+                  },
+                  "required": ["id", "description", "img", "meta", "title"]
                 }
               }
             }
@@ -69,6 +113,7 @@
                   "items": {
                     "type": "object",
                     "properties": {
+                      "id": { "type": "string" },
                       "description": { "type": "string" },
                       "img": { "type": "string" },
                       "meta": {
@@ -81,7 +126,7 @@
                       },
                       "title": { "type": "string" }
                     },
-                    "required": ["description", "img", "meta", "title"]
+                    "required": ["id", "description", "img", "meta", "title"]
                   }
                 }
               }

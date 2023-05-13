@@ -1,8 +1,15 @@
 import { default as NextImage } from 'next/image';
-import React from 'react';
+import React, { forwardRef } from 'react';
 
 import { ImageProps } from './shared';
 
-export default function Image({ web }: ImageProps) {
-  return <NextImage {...web} />;
-}
+export default forwardRef<HTMLImageElement | null, ImageProps>(function Image(
+  { web },
+  ref,
+) {
+  if (!web) {
+    throw Error('You must pass web prop into Image component!');
+  }
+
+  return <NextImage ref={ref} {...web} />;
+});

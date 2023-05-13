@@ -1,5 +1,7 @@
-import { faker } from '@faker-js/faker/locale/ko';
-import { times } from 'lodash';
+import { readFileSync } from 'fs';
+import { join } from 'path';
+
+import { GetApiPosts200Item } from 'api';
 
 import { HTTP_STATUS } from '../../../service/httpStatus';
 
@@ -23,6 +25,8 @@ import { HTTP_STATUS } from '../../../service/httpStatus';
  *                items:
  *                  type: object
  *                  properties:
+ *                   id:
+ *                      type: string
  *                   description:
  *                      type: string
  *                   img:
@@ -40,27 +44,20 @@ import { HTTP_STATUS } from '../../../service/httpStatus';
  *                   title:
  *                      type: string
  *                  required:
+ *                    - id
  *                    - description
  *                    - img
  *                    - meta
  *                    - title
  */
 export async function GET() {
-  return new Response(JSON.stringify(DATA), {
+  const dataDir = join(process.cwd(), '/public/data/posts.json');
+  const jsonString = readFileSync(dataDir, 'utf8');
+  const { data } = JSON.parse(jsonString) as {
+    data: GetApiPosts200Item[];
+  };
+
+  return new Response(JSON.stringify(data), {
     status: HTTP_STATUS.OK,
   });
 }
-
-function getData() {
-  return {
-    description: faker.lorem.paragraph(),
-    img: faker.image.animals(80, 80, true),
-    meta: {
-      createdAt: faker.date.recent(),
-      location: faker.address.cityName(),
-    },
-    title: faker.lorem.paragraph(),
-  };
-}
-
-const DATA = times(40, getData);

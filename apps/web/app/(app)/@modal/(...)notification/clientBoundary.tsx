@@ -2,6 +2,7 @@
 
 import 'client-only';
 import { useVirtualizer } from '@tanstack/react-virtual';
+import { GetApiNotifications200Item } from 'api';
 import { map } from 'lodash';
 import { useRouter } from 'next/navigation';
 import { useEffect, useRef, useState } from 'react';
@@ -11,10 +12,8 @@ import {
   ESTIMATED_ITEM_SIZE,
 } from 'ui/src/template/notificationList';
 
-import { Notification } from '../../api/notifications/notification';
-
 interface ClientBoundaryProps {
-  data: Notification[];
+  data: GetApiNotifications200Item[];
 }
 
 export default function ClientBoundary({ data = [] }: ClientBoundaryProps) {

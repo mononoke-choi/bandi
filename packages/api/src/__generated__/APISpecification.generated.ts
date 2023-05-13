@@ -12,15 +12,30 @@ export type GetApiPosts200ItemMeta = {
 };
 
 export type GetApiPosts200Item = {
+  id: string;
   description: string;
   img: string;
   meta: GetApiPosts200ItemMeta;
   title: string;
 };
 
+export type GetApiPostPostId200Meta = {
+  createdAt: string;
+  location: string;
+};
+
+export type GetApiPostPostId200 = {
+  id: string;
+  description: string;
+  img: string;
+  meta: GetApiPostPostId200Meta;
+  title: string;
+};
+
 export type GetApiNotifications200Item = {
   title: string;
   date: string;
+  img: string;
 };
 
 export type GetApiHello200 = {
@@ -62,6 +77,21 @@ export const getApiNotifications = (
 };
 
 /**
+ * post detail
+
+ * @summary post
+ */
+export const getApiPostPostId = (
+  postId: string,
+  options?: SecondParameter<typeof customClient>,
+) => {
+  return customClient<GetApiPostPostId200>(
+    { url: `/api/post/${postId}`, method: 'get' },
+    options,
+  );
+};
+
+/**
  * recent post list
 
  * @summary post
@@ -78,6 +108,9 @@ export type GetApiHelloResult = NonNullable<
 >;
 export type GetApiNotificationsResult = NonNullable<
   Awaited<ReturnType<typeof getApiNotifications>>
+>;
+export type GetApiPostPostIdResult = NonNullable<
+  Awaited<ReturnType<typeof getApiPostPostId>>
 >;
 export type GetApiPostsResult = NonNullable<
   Awaited<ReturnType<typeof getApiPosts>>

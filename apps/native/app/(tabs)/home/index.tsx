@@ -1,10 +1,9 @@
-import { getApiPosts } from 'api/src';
+import { getApiPosts, GetApiPostsResult } from 'api';
 import { useEffect, useState } from 'react';
 import HomeTemplate from 'ui/src/template/home';
-import { Post } from 'web/app/api/posts/post';
 
 export default function Home() {
-  const [data, setData] = useState<Post[]>([]);
+  const [data, setData] = useState<GetApiPostsResult>();
 
   useEffect(function fetchOnDidMount() {
     getApiPosts().then(res => {
@@ -12,5 +11,5 @@ export default function Home() {
     });
   }, []);
 
-  return <HomeTemplate data={data} />;
+  return <HomeTemplate data={data ?? []} />;
 }

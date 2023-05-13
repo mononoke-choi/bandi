@@ -57,6 +57,7 @@ export default function RootLayout() {
             <WithRecoilSync>
               <Stack>
                 <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+                <Stack.Screen name="index" />
                 <Stack.Screen name="setting" />
                 <Stack.Screen
                   name="modal"

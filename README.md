@@ -76,7 +76,7 @@ Android, iOS and Web based on turbo repo
   - Examples
     - ~~Svgr usage~~
     - ~~Solito~~
-    - Shared element transition
+    - ~~Shared element transition~~
   - ~~Replace async storage with mmkv storage~~
   - Fix broken detox
   - handling dotenv sensitive data

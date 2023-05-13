@@ -22,6 +22,7 @@ var src_exports = {};
 __export(src_exports, {
   getApiHello: () => getApiHello,
   getApiNotifications: () => getApiNotifications,
+  getApiPostPostId: () => getApiPostPostId,
   getApiPosts: () => getApiPosts
 });
 module.exports = __toCommonJS(src_exports);
@@ -82,6 +83,12 @@ var getApiNotifications = (options) => {
     options
   );
 };
+var getApiPostPostId = (postId, options) => {
+  return customClient(
+    { url: `/api/post/${postId}`, method: "get" },
+    options
+  );
+};
 var getApiPosts = (options) => {
   return customClient(
     { url: `/api/posts`, method: "get" },
@@ -92,5 +99,6 @@ var getApiPosts = (options) => {
 0 && (module.exports = {
   getApiHello,
   getApiNotifications,
+  getApiPostPostId,
   getApiPosts
 });

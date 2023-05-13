@@ -29,12 +29,15 @@ import { Notification } from './notification';
  *                      type: string
  *                    date:
  *                      type: string
+ *                    img:
+ *                      type: string
  *                  required:
  *                    - title
  *                    - date
+ *                    - img
  */
 export async function GET() {
-  const dataDir = join(process.cwd(), '/public/notifications.json');
+  const dataDir = join(process.cwd(), '/public/data/notifications.json');
   const jsonString = readFileSync(dataDir, 'utf8');
   const { data } = JSON.parse(jsonString) as {
     data: Notification[];

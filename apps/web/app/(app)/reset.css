@@ -363,3 +363,7 @@ template {
 [hidden] {
   display: none;
 }
+
+.swagger-ui {
+  width : 100%;
+}

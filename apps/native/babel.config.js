@@ -19,8 +19,8 @@ module.exports = function (api) {
           include: ['TAMAGUI_TARGET', 'APP_ENV'],
         },
       ],
-      'react-native-reanimated/plugin',
       require.resolve('expo-router/babel'),
+      'react-native-reanimated/plugin',
     ],
   };
 };

@@ -14,3 +14,14 @@ Use ADB reverse to bind an emulator port to a port on your computer.
 
 </p>
 </details>
+
+<details>
+<summary>The transition movement of post thumbnail is unnatural on native</summary>
+<p>
+
+We are using Shared Element Transitions powered by React Native Reanimated.
+and It is an experimental feature, not recommended for production use yet.
+we're just trying it out
+
+</p>
+</details>
