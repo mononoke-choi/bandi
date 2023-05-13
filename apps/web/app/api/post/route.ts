@@ -8,7 +8,7 @@ import { HTTP_STATUS } from '../../../service/httpStatus';
 /**
  * @swagger
  * paths:
- *  /api/posts:
+ *  /api/post:
  *    get:
  *      tags:
  *        - post

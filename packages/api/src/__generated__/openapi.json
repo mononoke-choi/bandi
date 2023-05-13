@@ -98,7 +98,7 @@
         }
       }
     },
-    "/api/posts": {
+    "/api/post": {
       "get": {
         "tags": ["post"],
         "summary": "post",
