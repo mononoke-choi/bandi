@@ -71,14 +71,14 @@ Android, iOS and Web based on turbo repo
     - ~~Intercepting route~~
     - Shared element transition
   - ~~Recoil sync~~
-  - Cypress
+  - ~~Cypress~~
 - Native
   - Examples
     - ~~Svgr usage~~
     - ~~Solito~~
     - ~~Shared element transition~~
   - ~~Replace async storage with mmkv storage~~
-  - Fix broken detox
+  - ~~Fix broken detox~~
   - handling dotenv sensitive data
 - Docs
   - apps/native
