@@ -2,6 +2,7 @@
 
 import 'client-only';
 import { isFunction } from 'lodash';
+import { Route } from 'next';
 import { useRouter } from 'next/navigation';
 import React, { ComponentProps, ReactNode } from 'react';
 import { Button, Stack, Text, XStack } from 'tamagui';
@@ -95,12 +96,14 @@ export function HeaderBackButton({ fallbackUrl }: HeaderBackButtonProps) {
     <Button
       unstyled
       onPress={() => {
-        const canGoBack = window.history.length > 2;
+        const canGoBack =
+          // @ts-expect-error navigation type definition is nowhere to be found yet
+          window.navigation?.canGoBack ?? window.history.length > 2;
 
         if (canGoBack) {
           back();
         } else {
-          push(fallbackUrl);
+          push(fallbackUrl as Route);
         }
       }}
     >
