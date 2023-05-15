@@ -56,6 +56,9 @@ const addSVGRModuleRule = config => {
 module.exports = function () {
   /** @type {import('next').NextConfig} */
   let nextConfig = {
+    compiler: {
+      reactRemoveProperties: true,
+    },
     images: {
       remotePatterns: [
         {

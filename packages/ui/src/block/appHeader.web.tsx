@@ -50,6 +50,7 @@ export default function AppHeader({
 
   return (
     <XStack
+      testID="appHeader"
       // @ts-expect-error Tamagui-unsupported-web-only-type
       position="sticky"
       top={0}

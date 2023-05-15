@@ -6,6 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "cypress:open": "cypress open",
     "lint": "next lint",
     "clean": "rm -rf .next .tamagui"
   },
@@ -36,6 +37,7 @@
     "@types/swagger-ui-react": "^4.18.0",
     "babel-plugin-react-native-web": "^0.19.4",
     "client-only": "^0.0.1",
+    "cypress": "^12.12.0",
     "next-swagger-doc": "^0.3.6",
     "server-only": "^0.0.1",
     "swagger-ui-react": "^4.18.3",
