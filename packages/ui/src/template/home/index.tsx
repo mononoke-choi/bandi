@@ -155,6 +155,7 @@ export default function HomeTemplate({ data }: HomeTemplateProps) {
             transitionTag={'postThumbnail' + index}
           />
         ),
+        testID: 'homeTabScreen',
       }}
       web={{
         count,

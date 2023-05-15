@@ -10,6 +10,7 @@ export default function Page() {
       <Link href="/home">
         <Stack backgroundColor="$green8" borderRadius={10}>
           <Text
+            testID="signInButton"
             fontFamily="$body"
             fontSize="$7"
             color="$gray1"

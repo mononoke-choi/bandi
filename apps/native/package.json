@@ -44,7 +44,7 @@
     "@tamagui/themes": "1.23.0",
     "api": "*",
     "dayjs": "^1.11.7",
-    "detox": "^20.7.0",
+    "detox": "^20.9.0",
     "eslint-config-custom": "*",
     "expo": "~48.0.15",
     "expo-clipboard": "^4.1.2",
@@ -92,7 +92,7 @@
     "@types/react-native": "^0.71.5",
     "babel-jest": "^29.4.3",
     "babel-plugin-transform-inline-environment-variables": "^0.4.4",
-    "jest": "^29.4.3",
+    "jest": "^29.5.0",
     "jest-expo": "^48.0.2",
     "typescript": "^4.9.4"
   },
