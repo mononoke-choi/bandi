@@ -6,6 +6,6 @@ import { STORE_KEY } from '../../config/constant';
 export const MMKVStorage = new MMKV({
   id: STORE_KEY,
   ...Platform.select({
-    native: { encryptionKey: 'your-encryption-key' },
+    native: { encryptionKey: '<YOUR_ENCRYPTION_KEY>' },
   }),
 });
