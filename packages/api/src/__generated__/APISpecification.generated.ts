@@ -6,6 +6,7 @@
  * OpenAPI spec version: 0.1.0
  */
 import { customClient } from '../mutator';
+
 export type GetApiPost200ItemMeta = {
   createdAt: string;
   location: string;
@@ -40,6 +41,7 @@ export type GetApiNotifications200Item = {
 
 export type GetApiHello200 = {
   message: string;
+  createdAt: string;
 };
 
 // eslint-disable-next-line

@@ -18,8 +18,11 @@
               "application/json": {
                 "schema": {
                   "type": "object",
-                  "properties": { "message": { "type": "string" } },
-                  "required": ["message"]
+                  "properties": {
+                    "message": { "type": "string" },
+                    "createdAt": { "type": "string" }
+                  },
+                  "required": ["message", "createdAt"]
                 }
               }
             }

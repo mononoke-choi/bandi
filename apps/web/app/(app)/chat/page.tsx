@@ -1,24 +1,16 @@
 'use client';
 
 import 'client-only';
-import { getApiHello } from 'api';
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Text } from 'tamagui';
 import AppHeader, { AppHeaderProps } from 'ui/src/block/appHeader.web';
-import Wip from 'ui/src/template/wip';
+import ChatIndexTemplate from 'ui/src/template/chat';
 
 const Title: AppHeaderProps['title'] = styles => <Text {...styles}>Chat</Text>;
 export default function Page() {
-  useEffect(function fetchOnDidMount() {
-    getApiHello().then(res => {
-      alert(JSON.stringify(res));
-    });
-  }, []);
-
   return (
-    <>
+    <ChatIndexTemplate>
       <AppHeader title={Title} />
-      <Wip />
-    </>
+    </ChatIndexTemplate>
   );
 }

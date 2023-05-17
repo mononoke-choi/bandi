@@ -20,13 +20,19 @@ import { HTTP_STATUS } from '../../../service/httpStatus';
  *                properties:
  *                  message:
  *                    type: string
+ *                  createdAt:
+ *                    type: string
  *                required:
  *                  - message
+ *                  - createdAt
  */
 export async function GET() {
-  return new Response(JSON.stringify({ message: 'Hello Bandi!' }), {
-    status: HTTP_STATUS.OK,
-  });
+  return new Response(
+    JSON.stringify({ createdAt: Date(), message: 'Hello Bandi!' }),
+    {
+      status: HTTP_STATUS.OK,
+    },
+  );
 }
 
 export const runtime = 'experimental-edge';

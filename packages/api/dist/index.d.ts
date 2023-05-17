@@ -47,6 +47,7 @@ type GetApiNotifications200Item = {
 };
 type GetApiHello200 = {
     message: string;
+    createdAt: string;
 };
 type SecondParameter<T extends (...args: any) => any> = T extends (config: any, args: infer P) => any ? P : never;
 /**
