@@ -19,6 +19,8 @@ Android, iOS and Web based on turbo repo
 - [MMKVStorage](https://github.com/mrousavy/react-native-mmkv)
 - [FlashList (Virtualized list for Native)](https://shopify.github.io/flash-list/)
 - [Tanstack Virtual (Virtualized list for Web)](https://tanstack.com/virtual)
+- [React-native-swiper (carousel for Native)](https://github.com/leecade/react-native-swiper)
+- [Embla-carousel-react (carousel for Web)](https://www.embla-carousel.com/)
 - [React-native-debugger](https://github.com/jhen0409/react-native-debugger)
 - [Detox](https://wix.github.io/Detox/)
 - [Tamagui](https://tamagui.dev/)

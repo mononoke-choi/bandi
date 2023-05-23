@@ -15,5 +15,5 @@ export default function ChatIndexTemplate({
     });
   }, []);
 
-  return <SharedChatTemplate {...response}>;{children}</SharedChatTemplate>;
+  return <SharedChatTemplate {...response}>{children}</SharedChatTemplate>;
 }

@@ -6,7 +6,9 @@ import { useRefetchOnFocus } from '../../hook/useRefetchOnFocus';
 
 import { SharedChatTemplate, SharedChatIndexTemplateProps } from './shared';
 
-export default function ChatIndexTemplate(_: SharedChatIndexTemplateProps) {
+export default function ChatIndexTemplate({
+  children,
+}: SharedChatIndexTemplateProps) {
   const [response, setResponse] = useState<GetApiHello200>();
 
   useRefetchOnFocus(
@@ -18,5 +20,5 @@ export default function ChatIndexTemplate(_: SharedChatIndexTemplateProps) {
     true,
   );
 
-  return <SharedChatTemplate {...response} />;
+  return <SharedChatTemplate {...response}>{children}</SharedChatTemplate>;
 }
