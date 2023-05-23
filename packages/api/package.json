@@ -21,6 +21,6 @@
   },
   "dependencies": {
     "expo-constants": "^14.2.1",
-    "orval": "^6.15.0"
+    "orval": "^6.16.0"
   }
 }

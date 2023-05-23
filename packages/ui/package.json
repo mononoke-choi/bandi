@@ -16,27 +16,27 @@
     "@types/lodash": "^4.14.194",
     "@types/ms": "^0.7.31",
     "@types/react": "~18.0.27",
-    "@types/react-native": "^0.71.5",
+    "@types/react-native": "^0.72.1",
     "tsconfig": "*",
     "tsup": "^6.0.1",
     "typescript": "^4.9.4"
   },
   "dependencies": {
-    "@tamagui/animations-react-native": "1.23.0",
-    "@tamagui/babel-plugin": "1.23.0",
-    "@tamagui/config": "1.23.0",
-    "@tamagui/font-inter": "1.23.0",
-    "@tamagui/lucide-icons": "1.23.0",
-    "@tamagui/themes": "1.23.0",
+    "@tamagui/animations-react-native": "1.29.3",
+    "@tamagui/babel-plugin": "1.29.3",
+    "@tamagui/config": "1.29.3",
+    "@tamagui/font-inter": "1.29.3",
+    "@tamagui/lucide-icons": "1.29.3",
+    "@tamagui/themes": "1.29.3",
     "dayjs": "^1.11.7",
     "eslint-config-custom": "*",
     "lodash": "^4.17.21",
     "ms": "^2.1.3",
     "react": "^18.2.0",
     "react-hook-form": "^7.43.9",
-    "react-native": "0.71.7",
+    "react-native": "0.71.8",
     "recoil": "^0.7.7",
     "recoil-sync": "^0.2.0",
-    "tamagui": "1.23.0"
+    "tamagui": "1.29.3"
   }
 }

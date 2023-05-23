@@ -17,10 +17,10 @@
   "dependencies": {},
   "devDependencies": {
     "@types/prettier": "latest",
-    "check-dependency-version-consistency": "latest",
+    "check-dependency-version-consistency": "3.2.1",
     "eslint-config-custom": "*",
     "prettier": "2.8.8",
-    "turbo": "1.9.3",
+    "turbo": "1.9.8",
     "zx": "^7.2.0"
   },
   "packageManager": "yarn@1.22.19"
