@@ -31,7 +31,7 @@ export default function ClientBoundary({ data = [] }: ClientBoundaryProps) {
   useEffect(function renderSheetAfterSomePortalMountingDuration() {
     setTimeout(() => {
       setOpen(true);
-    }, 200);
+    });
   }, []);
 
   return (

@@ -12,8 +12,8 @@
   },
   "dependencies": {
     "@svgr/webpack": "^8.0.1",
-    "@tamagui/next-plugin": "1.29.3",
-    "@tamagui/next-theme": "1.29.3",
+    "@tamagui/next-plugin": "1.30.0",
+    "@tamagui/next-theme": "1.30.0",
     "@tanstack/react-virtual": "^3.0.0-beta.54",
     "api": "*",
     "embla-carousel-react": "^8.0.0-rc04",
@@ -26,7 +26,7 @@
     "react-native-web-lite": "1.29.3",
     "safe-compare": "^1.1.4",
     "solito": "^3.2.6",
-    "tamagui": "1.29.3",
+    "tamagui": "1.30.0",
     "ui": "*"
   },
   "devDependencies": {
