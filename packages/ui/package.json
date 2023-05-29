@@ -15,7 +15,7 @@
   "devDependencies": {
     "@types/lodash": "^4.14.194",
     "@types/ms": "^0.7.31",
-    "@types/react": "~18.0.27",
+    "@types/react": "~18.2.7",
     "@types/react-native": "^0.72.1",
     "tsconfig": "*",
     "tsup": "^6.0.1",
