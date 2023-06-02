@@ -5,12 +5,12 @@
   "types": "./dist/index.d.ts",
   "license": "MIT",
   "scripts": {
-    "clean": "rm -rf dist",
     "writeOpenapi": "ts-node -r tsconfig-paths/register src/getAndWriteOpenApi.ts",
     "postwriteOpenapi": "prettier src/__generated__/openapi.json --write",
     "generate:orval:prod": "APP_ENV=production orval --config src/orvalConfig.ts && tsup src/index.ts --dts --minify",
     "generate:orval:dev": "APP_ENV=development orval --config src/orvalConfig.ts && tsup src/index.ts --dts --watch",
-    "lint": "eslint . --fix"
+    "lint": "eslint . --fix",
+    "clean": "rm -rf dist"
   },
   "devDependencies": {
     "eslint-config-custom": "*",

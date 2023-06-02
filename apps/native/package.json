@@ -22,9 +22,7 @@
     "detox:ios:release:test": "DETOX=true detox test -c ios.release",
     "debugger": "unset ELECTRON_RUN_AS_NODE && open -g 'rndebugger://set-debugger-loc?port=8081'",
     "lint": "eslint . --fix",
-    "clean": "rm -rf .expo .expo-shared ios android",
-    "android": "expo run:android",
-    "ios": "expo run:ios"
+    "clean": "rm -rf .expo .expo-shared ios android"
   },
   "jest": {
     "preset": "jest-expo"

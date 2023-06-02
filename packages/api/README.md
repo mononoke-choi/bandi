@@ -1,5 +1,12 @@
 # [Api] Available commands
 
+- `writeOpenapi`: Write openapi.json file from next.js local server
+- `postwriteOpenapi`: Format the code using ESLint 
+- `generate:orval:prod`: Generate API from openapi.json for production
+- `generate:orval:dev`: Generate API from openapi.json for development
+- `lint`: Lints the code using ESLint
+- `clean`: Clear build outputs
+
 # Swagger UI
 After running local server, if you type [http://localhost:3000/swagger](http://localhost:3000/swagger) URL in 
 browser you could see swagger page

@@ -1,10 +1,20 @@
 
-# Bandi 🐶 (🏗️🏗️ WIP 🏗️🏗️)
-
-English | [한국어](./README.ko-kr.md)
+# Bandi 🐶
 
 This is fullstack React Native opinionated boilerplate with Expo-router, Tamagui, Recoil and Next.js supporting 
 Android, iOS and Web based on turbo repo
+
+## Quick start
+
+> npx degit mononoke-choi/bandi my-project
+> 
+> cd my-project && yarn install
+> 
+> cd apps/native && yarn ios:build:local
+> 
+> yarn dev
+
+It uses expo-dev-client. create your own Development Client first
 
 ## Tech Stack
 
@@ -33,6 +43,7 @@ Android, iOS and Web based on turbo repo
 ## What you get more
 
 - Mono repository support
+- ESLint and Prettier configurations
 - Use Route handler of Next.js as an API layer of React Native
 - Send Slack message using Route handler when your Expo Application Services (EAS) build or submission has completed
 - Recoil sync with MMKV Storage for State persistence
@@ -55,35 +66,24 @@ Android, iOS and Web based on turbo repo
 
 ## Supported platforms
 
-- Android (React-Native 0.71.6)
-- iOS (React-Native 0.71.6)
-- Web (React-Native 0.71.6)
+- Android (React-Native 0.71.8)
+- iOS (React-Native 0.71.8)
+- Web (React-Native 0.71.8)
 
-### Todo
+## [Native] Available commands
 
-- Web
-  - Examples
-    - ~~Svgr usage~~
-    - ~~Migrate to app directory~~
-    - ~~Add app header and bottom navigation for consistent UI between native and web~~
-    - ~~Solito~~
-    - CSR, SSR, SSG, ISR, On-demand ISR
-    - ~~Parallel route~~
-    - Conditional route
-    - ~~Intercepting route~~
-    - Shared element transition
-  - ~~Recoil sync~~
-  - ~~Cypress~~
-- Native
-  - Examples
-    - ~~Svgr usage~~
-    - ~~Solito~~
-    - ~~Shared element transition~~
-  - ~~Replace async storage with mmkv storage~~
-  - ~~Fix broken detox~~
-  - handling dotenv sensitive data
-- Docs
-  - apps/native
-  - apps/web
-  - packages/api
-  - packages/ui
+In general, root package.json is used to manage mono repository
+
+- `postinstall`: Install missing TypeScript typings for dependencies in your package.json
+- `dev`: Starts the development server metro (native) and webpack (web) 
+- `build`: build Next.js app for production
+- `clean`: Clear build outputs
+- `postclean`: Install after running clean script
+- `lint`: Lints the code using ESLint
+- `prettier`: Checks the code for proper formatting
+- `check-deps`: Check your unmatched dependency versions
+
+## More Details
+- [Native](./apps/native/README.md)
+- [Web](./apps/web/README.md)
+- [Api](./packages/api/README.md)

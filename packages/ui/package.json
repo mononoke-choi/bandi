@@ -9,8 +9,8 @@
   "scripts": {
     "build": "tsup src/index.tsx --dts --minify --external react",
     "dev": "tsup src/index.tsx --watch --dts --external react",
-    "clean": "rm -rf dist",
-    "lint": "eslint . --fix"
+    "lint": "eslint . --fix",
+    "clean": "rm -rf dist"
   },
   "devDependencies": {
     "@types/lodash": "^4.14.194",
