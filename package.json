@@ -16,11 +16,11 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "@types/prettier": "latest",
-    "check-dependency-version-consistency": "3.2.1",
+    "@types/prettier": "^2.7.3",
+    "check-dependency-version-consistency": "4.1.0",
     "eslint-config-custom": "*",
     "prettier": "2.8.8",
-    "turbo": "1.9.8",
+    "turbo": "1.10.1",
     "zx": "^7.2.0"
   },
   "packageManager": "yarn@1.22.19"
