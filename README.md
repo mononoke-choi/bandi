@@ -6,13 +6,15 @@ Android, iOS and Web based on turbo repo
 
 ## Quick start
 
-> npx degit mononoke-choi/bandi my-project
-> 
-> cd my-project && yarn install
-> 
-> cd apps/native && yarn ios:build:local
-> 
-> yarn dev
+```npm
+npx degit mononoke-choi/bandi my-project
+
+cd my-project && yarn install
+ 
+cd apps/native && yarn ios:build:local
+ 
+yarn dev
+```
 
 It uses expo-dev-client. create your own Development Client first
 
@@ -70,7 +72,7 @@ It uses expo-dev-client. create your own Development Client first
 - iOS (React-Native 0.71.8)
 - Web (React-Native 0.71.8)
 
-## [Native] Available commands
+## [Root] Available commands
 
 In general, root package.json is used to manage mono repository
 
