@@ -1,13 +1,12 @@
 import { Tabs } from 'expo-router';
 import { useTheme } from 'tamagui';
 import { ACTIVE_TINT_COLOR, HEADER_EDGE_SPACE_TOKEN } from 'ui/config/constant';
-import { HomeHeaderRight } from 'ui/src/layout/appHeader/home';
 import MyPageHeaderRight from 'ui/src/layout/appHeader/myPage';
 import {
-  getMyPageTabBarIconOptions,
-  getHomeTabIconOptions,
   getChatTabBarIconOptions,
   getCrewTabBarIconOptions,
+  getHomeTabIconOptions,
+  getMyPageTabBarIconOptions,
 } from 'ui/src/layout/tabBar/icons';
 
 export const unstable_settings = {
@@ -36,7 +35,6 @@ export default function TabLayout() {
       <Tabs.Screen
         name="home"
         options={{
-          headerRight: HomeHeaderRight,
           ...getHomeTabIconOptions(),
         }}
       />

@@ -1,5 +1,6 @@
 import { Stack } from 'expo-router';
 import React from 'react';
+import { HomeHeaderRight } from 'ui/src/layout/appHeader/home';
 
 export default function Layout() {
   return (
@@ -13,6 +14,7 @@ export default function Layout() {
         <Stack.Screen
           name="index"
           options={{
+            headerRight: HomeHeaderRight,
             title: 'Home',
           }}
         />
