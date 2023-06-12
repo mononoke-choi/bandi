@@ -3787,10 +3787,20 @@
   resolved "https://registry.yarnpkg.com/@tamagui/colors/-/colors-1.30.16.tgz#b5a34a063de3ead2ed435302bc23cd8df92211f8"
   integrity sha512-83ZKa4fXR9/KB+RzvHvxO36vhlHx5TnAOl0GPzBD+5ca1kk5+qRMpUPGwFZnJltvumbRUbtpFnxmhxSNpjWQ7A==
 
+"@tamagui/colors@1.32.2":
+  version "1.32.2"
+  resolved "https://registry.yarnpkg.com/@tamagui/colors/-/colors-1.32.2.tgz#b2c5998ce50152d56f00646c52dbfb2fd131533c"
+  integrity sha512-18QpM5CddkiX6kwzXY57SgiQUFRPrEBvViUOQIhDa0gcb318M8gXECH4wptBrqkwoolS6tJe7EiCxvvy1mtJ1w==
+
 "@tamagui/compose-refs@1.30.16":
   version "1.30.16"
   resolved "https://registry.yarnpkg.com/@tamagui/compose-refs/-/compose-refs-1.30.16.tgz#2175eb664901d9a22d673739797b68f92757e5e6"
   integrity sha512-rq0N03MUDmTNiE7RH4SGlb/+j2fy6bBjMWFGmje2+EMuTvSY/SsCt/Q2rbXNKOf89ieJch4D6/Dx1lXEj2tRaA==
+
+"@tamagui/compose-refs@1.32.2":
+  version "1.32.2"
+  resolved "https://registry.yarnpkg.com/@tamagui/compose-refs/-/compose-refs-1.32.2.tgz#91193b5183b6f1cd7d556dc2635e5e0931430385"
+  integrity sha512-9FA6ZTvrBpzkiNOJHJXcFONGLVcDtaiQyE+oZG9eq96Jo/puKZGRFtaPk3X6PGaBm6vh6z3oUyfV9dNqS4eXzA==
 
 "@tamagui/config-default-node@1.30.16":
   version "1.30.16"
@@ -3818,6 +3828,11 @@
   version "1.30.16"
   resolved "https://registry.yarnpkg.com/@tamagui/constants/-/constants-1.30.16.tgz#931999ce38049ee296bf02fca25283ad3e121a7b"
   integrity sha512-NF9hVjWO08uRZz6uQdMs5kfY17eVT+X8FmH6cxerdwA2caEGoBS2+I2iTq//ggrBJwSzKdoLzyAfFjgnF8b75w==
+
+"@tamagui/constants@1.32.2":
+  version "1.32.2"
+  resolved "https://registry.yarnpkg.com/@tamagui/constants/-/constants-1.32.2.tgz#0d777efab1a511d9bfd1c34f4a6a5ca2876b50d4"
+  integrity sha512-Gj4hw23x59Lo0VcbFXTBHgLtbZhZIuA03ASDOQACxnOZsAi3Hx7TMDrTGAJpWHSx7zOT9kAABJRqcdyY6HcYSA==
 
 "@tamagui/core-node@1.30.16":
   version "1.30.16"
@@ -3849,6 +3864,13 @@
   integrity sha512-p697Lw1d2H1AAjaMrFhMQvETERyr6FVBLsJFmy6uEi5I0J+ZJeIeJRI2BZBWCenQuioCwndgfDvugCQuFZPiBw==
   dependencies:
     "@tamagui/web" "1.30.16"
+
+"@tamagui/create-theme@1.32.2":
+  version "1.32.2"
+  resolved "https://registry.yarnpkg.com/@tamagui/create-theme/-/create-theme-1.32.2.tgz#996181ec15383c231c537b3a51a21f8d8f997772"
+  integrity sha512-2DyfzJFKU6XHy6Z8Y9sYB5oS27l/MrtEZn1TglbQpN7k8Zd6TRhN/1mOfMz7TIXEE1GyE7L/h+WOBqjDVLP5Eg==
+  dependencies:
+    "@tamagui/web" "1.32.2"
 
 "@tamagui/cubic-bezier-animator@1.30.16":
   version "1.30.16"
@@ -4005,6 +4027,13 @@
   dependencies:
     "@tamagui/simple-hash" "1.30.16"
 
+"@tamagui/helpers@1.32.2":
+  version "1.32.2"
+  resolved "https://registry.yarnpkg.com/@tamagui/helpers/-/helpers-1.32.2.tgz#d4fbd0ccb9bb89d629a19dc6634d58204e3ae18d"
+  integrity sha512-wVRMG05N7jLQunCXFDttYto9BuZJIzgt+bUKWjomeJD7mtpJdqONrhKRqGZZAdsqpDZjAjRVF7dq/niqYAqJNw==
+  dependencies:
+    "@tamagui/simple-hash" "1.32.2"
+
 "@tamagui/image@1.30.16":
   version "1.30.16"
   resolved "https://registry.yarnpkg.com/@tamagui/image/-/image-1.30.16.tgz#fa7f890449e44b86544e7e088942fa1b621af6f0"
@@ -4082,6 +4111,11 @@
   version "1.30.16"
   resolved "https://registry.yarnpkg.com/@tamagui/normalize-css-color/-/normalize-css-color-1.30.16.tgz#6590cd2ce459d00bcf467f64b1f12e62ced23b5d"
   integrity sha512-QvFpYMFUmcXoy2Lifwd8EB36Nin1DojwVit87Bdtgz6B8sPp3W6vRSHvxTTGpRIriaVN1xVPNfI099NeZhJhqA==
+
+"@tamagui/normalize-css-color@1.32.2":
+  version "1.32.2"
+  resolved "https://registry.yarnpkg.com/@tamagui/normalize-css-color/-/normalize-css-color-1.32.2.tgz#3c8a129ebb9b733d1a999d60c62ec99817c29a87"
+  integrity sha512-jjxIBYQY3UCeq8LUb6wysNrgF47B3Ozl+EyERxeafxAWYRcrXBn8JTvltLa1TIvPjytRzBjpvaBGulFhfhzCbg==
 
 "@tamagui/polyfill-dev@1.30.16":
   version "1.30.16"
@@ -4283,6 +4317,11 @@
   resolved "https://registry.yarnpkg.com/@tamagui/simple-hash/-/simple-hash-1.30.16.tgz#68bfe11e2a961fe142188c56b05b03d03aa31199"
   integrity sha512-9S6i6dXenVJoCI1Zpom6++ZgKdwrSMLzcT5xt35eYY6EqDdMOCboUkP6ZLvUCMtMOpPgRrtgEMZ3c9i9/4YeFg==
 
+"@tamagui/simple-hash@1.32.2":
+  version "1.32.2"
+  resolved "https://registry.yarnpkg.com/@tamagui/simple-hash/-/simple-hash-1.32.2.tgz#6c74a96c5e3e24ce64ac9d034815b5051b5ab98e"
+  integrity sha512-ZOBptA0+pnvU8Of9pt3ZJ2XPX1o8N+2Gc/4oNyb6wBGWYC7K3uCqZGP4v3vX41PpCJ8LxDy1tQY6ZL4XQPdpCQ==
+
 "@tamagui/slider@1.30.16":
   version "1.30.16"
   resolved "https://registry.yarnpkg.com/@tamagui/slider/-/slider-1.30.16.tgz#6d22e04820e7e5352ca37328b54fef350a1e18a8"
@@ -4393,6 +4432,15 @@
     "@tamagui/create-theme" "1.30.16"
     "@tamagui/web" "1.30.16"
 
+"@tamagui/themes@1.32.2":
+  version "1.32.2"
+  resolved "https://registry.yarnpkg.com/@tamagui/themes/-/themes-1.32.2.tgz#5cb8759d69de65102ef240ef435807fb1e0a82aa"
+  integrity sha512-j/BPJWppecElP5wvKUi0lhaJvAlLWBjzLEiwByNVnZ0ElnNdJrGT9cCZdIozjim5lv/xTq9k3NhUhCCoFUeISg==
+  dependencies:
+    "@tamagui/colors" "1.32.2"
+    "@tamagui/create-theme" "1.32.2"
+    "@tamagui/web" "1.32.2"
+
 "@tamagui/toggle-group@1.30.16":
   version "1.30.16"
   resolved "https://registry.yarnpkg.com/@tamagui/toggle-group/-/toggle-group-1.30.16.tgz#7b058c7dcc347762588065d4f31f9addf14a047c"
@@ -4457,6 +4505,13 @@
   dependencies:
     "@tamagui/constants" "1.30.16"
 
+"@tamagui/use-did-finish-ssr@1.32.2":
+  version "1.32.2"
+  resolved "https://registry.yarnpkg.com/@tamagui/use-did-finish-ssr/-/use-did-finish-ssr-1.32.2.tgz#9808cd90d87443f70aefa2665632f94d81694dea"
+  integrity sha512-7/vDBomWuaUCZa8oL6Vzz7WjMMR9CevyT8yXw1rRSHq5O01XtyAU5sjcnBc7DyhOp5rBfyG0vupIubPsWbuXQw==
+  dependencies:
+    "@tamagui/constants" "1.32.2"
+
 "@tamagui/use-direction@1.30.16":
   version "1.30.16"
   resolved "https://registry.yarnpkg.com/@tamagui/use-direction/-/use-direction-1.30.16.tgz#5473d55b8c26fd55a57d444210f687dd5fc7938c"
@@ -4467,10 +4522,20 @@
   resolved "https://registry.yarnpkg.com/@tamagui/use-event/-/use-event-1.30.16.tgz#ae6d1bd39b4194cc3636f6136b1a256321d6bcf7"
   integrity sha512-bxUnJhs4bUpXBB/aBDIwv1GvBFjYSNp+YwHL6du8csMrAQ/Sxx2c9aaX1j4wQG5RQEHGX67MLiwUZ/u6zjxwdw==
 
+"@tamagui/use-event@1.32.2":
+  version "1.32.2"
+  resolved "https://registry.yarnpkg.com/@tamagui/use-event/-/use-event-1.32.2.tgz#2093d4c7e9943aaa1b37d063aac1830feda888f7"
+  integrity sha512-jnsi7ggJ1X0aw/yyZNPCj1BkVTqLsCU00WGOj2hFA93/wAI/7zi7S9njwKGSkEaUihpfXMasLtOlQNra6mdwKQ==
+
 "@tamagui/use-force-update@1.30.16":
   version "1.30.16"
   resolved "https://registry.yarnpkg.com/@tamagui/use-force-update/-/use-force-update-1.30.16.tgz#e3685a8d85c04d0c5b4bb8531b07fdec026405a0"
   integrity sha512-Vblu13UDK+jVcCFE/2fKYO2xx3MyOwDkSkyupMfDC4z7PUn14SieY1YwxwBf7iyB9vNWxpZ+ocYNdjLpVapgew==
+
+"@tamagui/use-force-update@1.32.2":
+  version "1.32.2"
+  resolved "https://registry.yarnpkg.com/@tamagui/use-force-update/-/use-force-update-1.32.2.tgz#c8d0507ac4ca51d37f90b073232da85c32e94cb5"
+  integrity sha512-g2+Kegl9VH1GhuJ6/WuQAwvfw+6Ew5/un4b+r1aGyZpUUP4QfCjcQYWJEzZuKi1DGyuRol8JZib5iHZ6hNSjTQ==
 
 "@tamagui/use-keyboard-visible@1.30.16":
   version "1.30.16"
@@ -4510,6 +4575,19 @@
     "@tamagui/use-did-finish-ssr" "1.30.16"
     "@tamagui/use-event" "1.30.16"
     "@tamagui/use-force-update" "1.30.16"
+
+"@tamagui/web@1.32.2":
+  version "1.32.2"
+  resolved "https://registry.yarnpkg.com/@tamagui/web/-/web-1.32.2.tgz#263e0ce6c5d905fe581cba33558303b9f89c9468"
+  integrity sha512-cJHPEkSLlPSsy5mTgtlfck9//LSMfLDn/dy9CmlwkTzjzW5AzYZ0YkeR6GSrdeXUKfmSa1Us0N6U7kfl7TRCFQ==
+  dependencies:
+    "@tamagui/compose-refs" "1.32.2"
+    "@tamagui/constants" "1.32.2"
+    "@tamagui/helpers" "1.32.2"
+    "@tamagui/normalize-css-color" "1.32.2"
+    "@tamagui/use-did-finish-ssr" "1.32.2"
+    "@tamagui/use-event" "1.32.2"
+    "@tamagui/use-force-update" "1.32.2"
 
 "@tanstack/react-virtual@^3.0.0-beta.54":
   version "3.0.0-beta.54"
