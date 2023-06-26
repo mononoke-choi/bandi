@@ -39,7 +39,7 @@
     "@tamagui/config": "1.30.16",
     "@tamagui/font-inter": "1.30.16",
     "@tamagui/lucide-icons": "1.30.16",
-    "@tamagui/themes": "1.30.16",
+    "@tamagui/themes": "1.35.12",
     "api": "*",
     "dayjs": "^1.11.7",
     "detox": "^20.9.0",

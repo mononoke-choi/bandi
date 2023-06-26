@@ -27,7 +27,7 @@
     "@tamagui/config": "1.30.16",
     "@tamagui/font-inter": "1.30.16",
     "@tamagui/lucide-icons": "1.30.16",
-    "@tamagui/themes": "1.30.16",
+    "@tamagui/themes": "1.35.12",
     "dayjs": "^1.11.7",
     "eslint-config-custom": "*",
     "lodash": "^4.17.21",
