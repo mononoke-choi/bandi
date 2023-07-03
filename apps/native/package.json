@@ -73,7 +73,7 @@
     "react-native-svg": "13.4.0",
     "react-native-svg-transformer": "^1.0.0",
     "react-native-swiper": "^1.6.0",
-    "react-native-web": "~0.18.10",
+    "react-native-web": "~0.19.6",
     "react-native-webview": "11.26.0",
     "recoil": "^0.7.7",
     "tamagui": "1.30.16",
