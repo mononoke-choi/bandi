@@ -1,7 +1,7 @@
 import 'server-only';
 
 import { getApiNotifications } from 'api';
-import NotificationListTemplate from 'ui/src/template/notificationList';
+import { NotificationListTemplate } from 'ui';
 
 import ClientBoundary from './clientBoundary';
 

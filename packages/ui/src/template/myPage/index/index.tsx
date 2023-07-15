@@ -2,7 +2,7 @@ import { times, map } from 'lodash';
 import React from 'react';
 import { Text, XStack, YStack } from 'tamagui';
 
-export default function MyPageTemplate() {
+export function MyPageTemplate() {
   return (
     <YStack space={4}>
       {map(times(20), (_, index) => (

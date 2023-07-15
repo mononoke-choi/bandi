@@ -7,6 +7,6 @@ import Swiper from 'react-native-swiper';
 
 import { CarouselProps } from './shared';
 
-export default function Carousel({ children, native }: CarouselProps) {
+export function Carousel({ children, native }: CarouselProps) {
   return <Swiper {...native}>{children}</Swiper>;
 }

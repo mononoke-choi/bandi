@@ -2,10 +2,7 @@
 
 import 'client-only';
 import { Text } from 'tamagui';
-import AppHeader, {
-  HeaderBackButton,
-  AppHeaderProps,
-} from 'ui/src/block/appHeader.web';
+import { HeaderBackButton, AppHeader, AppHeaderProps } from 'ui';
 
 const Title: AppHeaderProps['title'] = styles => (
   <Text {...styles}>Notification</Text>

@@ -1,6 +1,6 @@
 import { Stack } from 'expo-router';
 import React from 'react';
-import { HomeHeaderRight } from 'ui/src/layout/appHeader/home';
+import { HomeHeaderRight } from 'ui';
 
 export default function Layout() {
   return (

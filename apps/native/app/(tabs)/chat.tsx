@@ -1,7 +1,6 @@
 import { map } from 'lodash';
 import { Stack, Text } from 'tamagui';
-import Carousel from 'ui/src/block/carousel';
-import ChatIndexTemplate from 'ui/src/template/chat';
+import { Carousel, ChatIndexTemplate } from 'ui';
 
 export default function Chat() {
   return (
@@ -21,7 +20,7 @@ export default function Chat() {
             flex={1}
             justifyContent="center"
           >
-            <Text color="#fff" fontSize="$10" fontWeight="$2">
+            <Text color="#fff" fontSize="$10" fontWeight="200">
               Slide {++index}
             </Text>
           </Stack>

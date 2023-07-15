@@ -1,9 +1,6 @@
 {
   "build": {
     "base": {
-      "env": {
-        "TAMAGUI_TARGET": "native"
-      },
       "ios": {
         "resourceClass": "m-medium"
       }
@@ -16,9 +13,6 @@
       },
       "developmentClient": true,
       "distribution": "internal",
-      "env": {
-        "APP_ENV": "development"
-      },
       "extends": "base",
       "ios": {
         "image": "latest",
@@ -30,15 +24,9 @@
         "buildType": "apk"
       },
       "distribution": "internal",
-      "env": {
-        "APP_ENV": "preview"
-      },
       "extends": "base"
     },
     "production": {
-      "env": {
-        "APP_ENV": "production"
-      },
       "extends": "base"
     }
   },

@@ -8,7 +8,7 @@ import { Button, Stack, XStack } from 'tamagui';
 
 import { CarouselProps } from './shared';
 
-export default function Carousel({ children, web }: CarouselProps) {
+export function Carousel({ children, web }: CarouselProps) {
   if (!web?.carouselProps) {
     throw Error(
       'You must pass web.carouselProps prop into Carousel component!',

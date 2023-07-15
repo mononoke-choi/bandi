@@ -1,6 +1,5 @@
 import { TopTabs } from '@bacons/expo-router-top-tabs';
-import { ACTIVE_TINT_COLOR } from 'ui/config/constant';
-import MyPageTopTabHeaderTemplate from 'ui/src/template/myPage/index/topTabHeader';
+import { ACTIVE_TINT_COLOR, MyPageTopTabHeaderTemplate } from 'ui';
 
 export const unstable_settings = {
   initialRouteName: 'index',

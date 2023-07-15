@@ -1,70 +1,27 @@
 module.exports = {
-  globals: {
-    __DEV__: true,
-  },
-  parserOptions: {
-    babelOptions: {
-      presets: [require.resolve('next/babel')],
-    },
-  },
-  settings: {
-    'import/ignore': ['node_modules/react-native/index\\.js$'],
-  },
   extends: [
     'next',
     'turbo',
     'eslint:recommended',
-    'next/core-web-vitals',
     'plugin:cypress/recommended',
     'plugin:import/recommended',
     'plugin:jsonc/recommended-with-json',
     'plugin:@typescript-eslint/recommended',
   ],
+  globals: {
+    __DEV__: true,
+  },
   ignorePatterns: [
     '**/*/__generated__/',
     '*.generated.*',
     '*.config.*',
     'e2e/**/*',
     'dist/**/*',
-    'package*',
+    'package.json',
     'ios/**/*',
     '@types',
     'android/**/*',
   ],
-  plugins: ['@typescript-eslint', 'cypress', 'sort-keys-fix'],
-  parser: '@typescript-eslint/parser',
-  rules: {
-    '@next/next/no-html-link-for-pages': 'off',
-    'import/consistent-type-specifier-style': 'error',
-    'import/first': 'error',
-    'import/newline-after-import': 'error',
-    'import/no-absolute-path': 'error',
-    'import/no-duplicates': 'error',
-    'import/no-empty-named-blocks': 'error',
-    'import/no-import-module-exports': 'error',
-    'import/no-namespace': 'error',
-    'import/no-relative-packages': 'error',
-    'import/no-useless-path-segments': 'error',
-    'import/order': [
-      'error',
-      {
-        alphabetize: {
-          caseInsensitive: true,
-          order: 'asc',
-        },
-        'newlines-between': 'always',
-      },
-    ],
-    'sort-keys-fix/sort-keys-fix': 'error',
-    'react/jsx-curly-brace-presence': [
-      1,
-      {
-        props: 'never',
-        children: 'never',
-        propElementValues: 'always',
-      },
-    ],
-  },
   overrides: [
     {
       excludedFiles: [
@@ -111,4 +68,42 @@ module.exports = {
       },
     },
   ],
+  parser: '@typescript-eslint/parser',
+  parserOptions: {
+    babelOptions: {
+      presets: [require.resolve('next/babel')],
+    },
+  },
+  plugins: ['@typescript-eslint', 'cypress', 'sort-keys-fix'],
+  rules: {
+    '@next/next/no-html-link-for-pages': 'off',
+    'import/consistent-type-specifier-style': 'error',
+    'import/first': 'error',
+    'import/newline-after-import': 'error',
+    'import/no-absolute-path': 'error',
+    'import/no-duplicates': 'error',
+    'import/no-empty-named-blocks': 'error',
+    'import/no-import-module-exports': 'error',
+    'import/no-namespace': 'error',
+    'import/no-relative-packages': 'error',
+    'import/no-useless-path-segments': 'error',
+    'import/order': [
+      'error',
+      {
+        alphabetize: {
+          caseInsensitive: true,
+          order: 'asc',
+        },
+        'newlines-between': 'always',
+      },
+    ],
+    'react/jsx-curly-brace-presence': [
+      1,
+      { children: 'never', props: 'never' },
+    ],
+    'sort-keys-fix/sort-keys-fix': 'error',
+  },
+  settings: {
+    'import/ignore': ['node_modules/react-native/index\\.js$'],
+  },
 };

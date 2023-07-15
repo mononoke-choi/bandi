@@ -1,10 +1,7 @@
 'use client';
 
 import 'client-only';
-import AppHeader, {
-  AppHeaderProps,
-  HeaderBackButton,
-} from 'ui/src/block/appHeader.web';
+import { AppHeader, AppHeaderProps, HeaderBackButton } from 'ui';
 
 const HeaderLeft: AppHeaderProps['headerRight'] = () => (
   <HeaderBackButton fallbackUrl="/" />

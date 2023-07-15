@@ -1,7 +1,7 @@
 import { readFileSync } from 'fs';
 import { join } from 'path';
 
-import { GetApiPosts200Item } from 'api';
+import { GetApiPost200Item } from 'api';
 
 import { HTTP_STATUS } from '../../../service/httpStatus';
 
@@ -54,7 +54,7 @@ export async function GET() {
   const dataDir = join(process.cwd(), '/public/data/posts.json');
   const jsonString = readFileSync(dataDir, 'utf8');
   const { data } = JSON.parse(jsonString) as {
-    data: GetApiPosts200Item[];
+    data: GetApiPost200Item[];
   };
 
   return new Response(JSON.stringify(data), {

@@ -8,7 +8,7 @@ import { PostIdTemplateProps, PostDetail } from './shared';
 
 const AnimatedImage = Animated.createAnimatedComponent(Image);
 
-export default function PostIdTemplate({
+export function PostIdTemplate({
   data: { img, title, description, meta },
   native,
 }: PostIdTemplateProps) {

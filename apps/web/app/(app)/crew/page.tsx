@@ -2,7 +2,7 @@
 
 import 'client-only';
 import { Text } from 'tamagui';
-import AppHeader, { AppHeaderProps } from 'ui/src/block/appHeader.web';
+import { AppHeader, AppHeaderProps } from 'ui';
 
 const Title: AppHeaderProps['title'] = styles => <Text {...styles}>Crew</Text>;
 export default function Page() {

@@ -1,4 +1,4 @@
-import type { TamaguiConfig } from 'ui/src/tamagui.config';
+import type { TamaguiConfig } from 'ui';
 
 declare module 'tamagui' {
   // overrides TamaguiCustomConfig so your custom types

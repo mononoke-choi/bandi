@@ -1,4 +1,4 @@
-import SettingTemplate from 'ui/src/template/myPage/setting';
+import { SettingTemplate } from 'ui';
 
 export default function Setting() {
   return <SettingTemplate />;

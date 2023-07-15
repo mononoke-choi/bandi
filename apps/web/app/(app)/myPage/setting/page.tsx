@@ -2,11 +2,12 @@
 
 import 'client-only';
 import { Text } from 'tamagui';
-import AppHeader, {
+import {
+  AppHeader,
   AppHeaderProps,
   HeaderBackButton,
-} from 'ui/src/block/appHeader.web';
-import SettingTemplate from 'ui/src/template/myPage/setting';
+  SettingTemplate,
+} from 'ui';
 
 const Title: AppHeaderProps['title'] = styles => (
   <Text {...styles}>Setting</Text>

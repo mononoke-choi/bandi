@@ -1,3 +1,5 @@
+import { createSwaggerSpec } from 'next-swagger-doc';
+
 export const swaggerConfig = {
   apiFolder: 'app/api',
   definition: {
@@ -9,4 +11,4 @@ export const swaggerConfig = {
     openapi: '3.0.0',
   },
   schemaFolders: [],
-} as const;
+} as Parameters<typeof createSwaggerSpec>[0];

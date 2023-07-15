@@ -1,14 +1,17 @@
 'use client';
 
 import 'client-only';
+import { Settings } from '@tamagui/lucide-icons';
 import { ReactNode } from 'react';
 import { Link } from 'solito/link';
 import { Text } from 'tamagui';
-import { HEADER_ICON_SIZE } from 'ui/config/constant';
-import SettingSVG from 'ui/src/assets/setting.svg';
-import AppHeader, { AppHeaderProps } from 'ui/src/block/appHeader.web';
-import TopTab from 'ui/src/layout/toptab/index.web';
-import MyPageTopTabHeaderTemplate from 'ui/src/template/myPage/index/topTabHeader';
+import {
+  AppHeader,
+  AppHeaderProps,
+  HEADER_ICON_SIZE,
+  MyPageTopTabHeaderTemplate,
+  TopTab,
+} from 'ui';
 
 interface LayoutProps {
   children: ReactNode;
@@ -19,7 +22,7 @@ const Title: AppHeaderProps['title'] = styles => (
 );
 const HeaderLeft: AppHeaderProps['headerRight'] = () => (
   <Link href="/myPage/setting">
-    <SettingSVG width={HEADER_ICON_SIZE} height={HEADER_ICON_SIZE} />
+    <Settings width={HEADER_ICON_SIZE} height={HEADER_ICON_SIZE} />
   </Link>
 );
 

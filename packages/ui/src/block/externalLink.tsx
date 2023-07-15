@@ -3,7 +3,7 @@ import React, { ComponentProps } from 'react';
 import { Platform } from 'react-native';
 import { Link } from 'solito/link';
 
-export default function ExternalLink(props: ComponentProps<typeof Link>) {
+export function ExternalLink(props: ComponentProps<typeof Link>) {
   return (
     <Link
       target="_blank"

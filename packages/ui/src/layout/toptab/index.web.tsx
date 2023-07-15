@@ -6,7 +6,7 @@ import React, { ComponentProps } from 'react';
 import { Link } from 'solito/link';
 import { getTokens, Text, XStack } from 'tamagui';
 
-import { ACTIVE_TINT_COLOR } from '../../../config/constant';
+import { ACTIVE_TINT_COLOR } from '../../config/constant';
 
 interface TopTabProps {
   links: { href: Route; title: string }[];
@@ -14,7 +14,7 @@ interface TopTabProps {
   _text?: ComponentProps<typeof Text>;
 }
 
-export default function TopTab({ links, _link, _text }: TopTabProps) {
+export function TopTab({ links, _link, _text }: TopTabProps) {
   const lastActiveSegment = useSelectedLayoutSegment() ?? '';
 
   return (

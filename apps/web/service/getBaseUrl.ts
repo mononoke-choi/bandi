@@ -3,7 +3,7 @@ export const getBaseUrl = () => {
   // eslint-disable-next-line turbo/no-undeclared-env-vars
   const runtimeEnv = process.env.TAMAGUI_TARGET;
   // eslint-disable-next-line turbo/no-undeclared-env-vars
-  const profile = process.env.APP_ENV;
+  const profile = process.env.EXPO_PUBLIC_PROFILE;
   // eslint-disable-next-line turbo/no-undeclared-env-vars
   const localHost = `http://localhost:${process.env.PORT ?? 3000}`;
   // eslint-disable-next-line turbo/no-undeclared-env-vars

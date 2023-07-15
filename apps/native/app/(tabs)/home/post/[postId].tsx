@@ -1,13 +1,10 @@
 import { GetApiPostPostIdResult, getApiPostPostId } from 'api';
 import { useLocalSearchParams } from 'expo-router';
 import { useEffect, useState } from 'react';
-import PostIdTemplate from 'ui/src/template/post/[postId]/index';
+import { PostIdTemplate } from 'ui';
 
 export default function Home() {
-  const { postId, sharedTransitionTag } = useLocalSearchParams<{
-    postId: string;
-    sharedTransitionTag: string;
-  }>();
+  const { postId, sharedTransitionTag } = useLocalSearchParams<never>();
   const [data, setData] = useState<GetApiPostPostIdResult>();
 
   useEffect(function fetchOnDidMount() {

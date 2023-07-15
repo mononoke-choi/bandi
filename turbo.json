@@ -1,10 +1,12 @@
 {
   "$schema": "https://turbo.build/schema.json",
   "globalDependencies": ["**/.env.*local"],
+  "globalEnv": ["NODE_ENV", "EAS_BUILD_PLATFORM"],
   "pipeline": {
     "build": {
       "dependsOn": ["^build"],
-      "outputs": ["!.next/cache/**", ".next/**", "dist/**"]
+      "env": ["NODE_ENV", "EAS_BUILD_PLATFORM"],
+      "outputs": [".next/**", "!.next/cache/**"]
     },
     "clean": {
       "cache": false

@@ -9,7 +9,7 @@ const DATA = [
   },
 ];
 
-export default function SettingTemplate() {
+export function SettingTemplate() {
   const theme = useTheme();
 
   return (

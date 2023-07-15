@@ -2,8 +2,8 @@
 
 - `writeOpenapi`: Write openapi.json file from next.js local server
 - `postwriteOpenapi`: Format the code using ESLint 
-- `generate:orval:prod`: Generate API from openapi.json for production
-- `generate:orval:dev`: Generate API from openapi.json for development
+- `dev`: Generate API from openapi.json for development
+- `build`: Generate API from openapi.json for production
 - `lint`: Lints the code using ESLint
 - `clean`: Clear build outputs
 

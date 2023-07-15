@@ -5,11 +5,11 @@ import { replace } from 'lodash';
 import React from 'react';
 import { Stack } from 'tamagui';
 
-import Image from '../../../block/image/image';
+import { Image } from '../../../block/image';
 
 import { PostIdTemplateProps, PostDetail } from './shared';
 
-export default function PostIdTemplate({
+export function PostIdTemplate({
   data: { img, meta, title, description },
 }: PostIdTemplateProps) {
   return (

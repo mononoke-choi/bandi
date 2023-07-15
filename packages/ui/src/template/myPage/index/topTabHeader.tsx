@@ -1,11 +1,11 @@
+import { MapPin } from '@tamagui/lucide-icons';
 import React from 'react';
 import { Text, Stack, XStack, YStack } from 'tamagui';
-import LocationSVG from 'ui/src/assets/location.svg';
 
-import Image from '../../../block/image/image';
+import { Image } from '../../../block/image';
 
 const PROFILE_IMAGE_SIZE = 54;
-export default function MyPageTopTabHeaderTemplate() {
+export function MyPageTopTabHeaderTemplate() {
   return (
     <YStack space={true}>
       <XStack gap={10} backgroundColor="$gray2" padding="$5">
@@ -32,7 +32,7 @@ export default function MyPageTopTabHeaderTemplate() {
             mononoke.choi
           </Text>
           <XStack alignItems="center">
-            <LocationSVG
+            <MapPin
               width={20}
               height={20}
               color="black"

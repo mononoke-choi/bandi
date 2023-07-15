@@ -7,7 +7,7 @@ import React from 'react';
 import { Link } from 'solito/link';
 import { Text, XStack, YStack } from 'tamagui';
 
-import { ACTIVE_TINT_COLOR } from '../../config/constant';
+import { ACTIVE_TINT_COLOR } from '../config/constant';
 import {
   getHomeTabIconOptions,
   getCrewTabBarIconOptions,
@@ -22,7 +22,7 @@ const TAB_LIST = [
   getMyPageTabBarIconOptions(),
 ];
 
-export default function BottomNavigation() {
+export function BottomNavigation() {
   const [firstSegment] = useSelectedLayoutSegments();
 
   return (
@@ -55,7 +55,7 @@ export default function BottomNavigation() {
               <Text
                 textDecorationLine="none"
                 fontFamily="$body"
-                fontSize="10px"
+                fontSize={10}
                 color={isActiveLink ? ACTIVE_TINT_COLOR : '$gray11'}
               >
                 {title}

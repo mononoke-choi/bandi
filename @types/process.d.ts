@@ -1,6 +1,6 @@
 declare namespace NodeJS {
   export interface ProcessEnv {
-    APP_ENV: 'production' | 'development' | 'preview';
+    EXPO_PUBLIC_PROFILE: 'production' | 'development' | 'preview';
     SECRET_WEBHOOK_KEY: string;
   }
 }

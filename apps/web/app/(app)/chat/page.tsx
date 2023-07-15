@@ -4,9 +4,7 @@ import 'client-only';
 import { map } from 'lodash';
 import React, { ComponentProps } from 'react';
 import { Stack, Text } from 'tamagui';
-import AppHeader, { AppHeaderProps } from 'ui/src/block/appHeader.web';
-import Carousel from 'ui/src/block/carousel';
-import ChatIndexTemplate from 'ui/src/template/chat';
+import { AppHeader, AppHeaderProps, Carousel, ChatIndexTemplate } from 'ui';
 
 const CAROUSEL_OPTION: ComponentProps<typeof Carousel>['web'] = {
   carouselProps: [{ loop: true }],
@@ -33,7 +31,7 @@ export default function Page() {
             backgroundColor="#98cae5"
             justifyContent="center"
           >
-            <Text color="#fff" fontSize="$10" fontWeight="$2">
+            <Text color="#fff" fontSize="$10" fontWeight="200">
               Slide {++index}
             </Text>
           </Stack>

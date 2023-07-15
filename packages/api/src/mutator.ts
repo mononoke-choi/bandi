@@ -12,7 +12,7 @@ type CustomClient = {
 
 const customClient = async <ResponseType>(
   { url, method, params, headers, signal, data }: CustomClient,
-  nextConfig: RequestInit['next'],
+  options?: RequestInit,
 ): Promise<ResponseType> => {
   const searchParams = params ? `?${new URLSearchParams(params)}` : '';
   const response = await fetch(getBaseUrl() + url + searchParams, {
@@ -20,9 +20,9 @@ const customClient = async <ResponseType>(
       ...headers,
     },
     method,
-    next: nextConfig,
     signal,
     ...(data ? { body: JSON.stringify(data) } : {}),
+    ...options,
   });
 
   if (response.ok) {

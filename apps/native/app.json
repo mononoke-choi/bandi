@@ -15,11 +15,9 @@
     "assetBundlePatterns": ["**/*"],
     "backgroundColor": "#ffffff",
     "description": "New RN starter kit",
-    "extra": {
-      "router": {
-        "asyncRoutes": "development",
-        "origin": "<YOUR_WEB_URL>.vercel.app"
-      }
+    "experiments": {
+      "tsconfigPaths": true,
+      "typedRoutes": true
     },
     "icon": "./assets/images/icon.png",
     "ios": {
@@ -32,9 +30,19 @@
     },
     "name": "Bandi",
     "orientation": "portrait",
-    "plugins": ["expo-notifications"],
+    "plugins": [
+      "expo-router",
+      "expo-notifications",
+      [
+        "expo-router",
+        {
+          "asyncRoutes": "development",
+          "origin": "<YOUR_WEB_URL>.vercel.app"
+        }
+      ]
+    ],
     "primaryColor": "#ffffff",
-    "privacy": "unlisted",
+    "privacy": "public",
     "scheme": "bandi",
     "slug": "bandi",
     "splash": {
@@ -42,13 +50,12 @@
       "image": "./assets/images/splash.png",
       "resizeMode": "contain"
     },
-    "updates": {
-      "fallbackToCacheTimeout": 0
-    },
     "userInterfaceStyle": "automatic",
     "version": "1.0.0",
     "web": {
-      "bundler": "metro"
+      "bundler": "metro",
+      "favicon": "./assets/images/favicon.png",
+      "output": "static"
     }
   }
 }

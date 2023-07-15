@@ -1,11 +1,10 @@
 import { ConfigContext, ExpoConfig } from '@expo/config';
 import * as _ from 'lodash';
-import ENV from './env.json';
 
 const config = ({
   config,
 }: Omit<ConfigContext, 'config'> & { config: ExpoConfig }): ExpoConfig => {
-  const APP_ENV = process.env.APP_ENV ?? 'development';
+  const APP_ENV = process.env.EXPO_PUBLIC_PROFILE ?? 'development';
   const isProductionEnv = APP_ENV === 'production';
   const addEnvSuffix = (value: string | undefined) => {
     if (value) {
@@ -16,10 +15,6 @@ const config = ({
   const override: Partial<ExpoConfig> = {
     android: {
       package: addEnvSuffix(config.android?.package),
-    },
-    extra: {
-      ...ENV[APP_ENV],
-      APP_ENV,
     },
     ios: {
       bundleIdentifier: addEnvSuffix(config.ios?.bundleIdentifier),

@@ -1,16 +1,16 @@
 'use client';
 
 import 'client-only';
+import { Heart } from '@tamagui/lucide-icons';
 import { GetApiPostResult, GetApiPost200Item } from 'api';
 import React, { ComponentProps } from 'react';
 import { Platform, Image as ReactNativeImage } from 'react-native';
 import Animated from 'react-native-reanimated';
 import { Link } from 'solito/link';
 import { getVariable, Text, XStack, YStack, useTheme } from 'tamagui';
-import HeartSVG from 'ui/src/assets/heart.svg';
 
-import Image from '../../block/image/image';
-import Windowing from '../../block/windowing';
+import { Image } from '../../block/image';
+import { Windowing } from '../../block/windowing';
 
 const AnimatedImage = Animated.createAnimatedComponent(ReactNativeImage);
 
@@ -20,7 +20,6 @@ function FixedRow({
   isLastItem,
   isWeb,
   transitionTag,
-  href,
   ...rest
 }: {
   item: GetApiPost200Item;
@@ -119,12 +118,8 @@ function FixedRow({
             <Text fontFamily="$body" fontSize="$1" color="$gray10">
               {item?.meta.createdAt?.toLocaleString()}
             </Text>
-            <XStack space="$1" alignItems="center" marginLeft="auto">
-              <HeartSVG
-                width={14}
-                height={14}
-                color={getVariable(theme.gray9)}
-              />
+            <XStack space="$2" alignItems="center" marginLeft="auto">
+              <Heart width={14} height={14} color={getVariable(theme.gray9)} />
               <Text fontFamily="$body" fontSize="$1" color="$gray10">
                 1
               </Text>
@@ -140,7 +135,7 @@ const ESTIMATED_ITEM_SIZE = 120;
 interface HomeTemplateProps {
   data: GetApiPostResult;
 }
-export default function HomeTemplate({ data }: HomeTemplateProps) {
+export function HomeTemplate({ data }: HomeTemplateProps) {
   const count = data.length;
 
   return (

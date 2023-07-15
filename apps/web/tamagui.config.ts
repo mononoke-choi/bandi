@@ -1,1 +1,1 @@
-export { default } from 'ui/src/tamagui.config';
+export { tamaguiConfig as default } from 'ui';

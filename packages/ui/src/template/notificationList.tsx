@@ -4,8 +4,8 @@ import React, { ComponentProps } from 'react';
 import { Text, XStack, YStack, Stack } from 'tamagui';
 import { Notification } from 'web/app/api/notifications/notification';
 
-import Image from '../block/image/image';
-import Windowing from '../block/windowing';
+import { Image } from '../block/image';
+import { Windowing } from '../block/windowing';
 
 const SENDER_IMAGE_SIZE = 40;
 export function FixedRow({
@@ -78,7 +78,7 @@ interface NotificationListTemplateProps {
   data: Notification[];
 }
 
-export default function NotificationListTemplate({
+export function NotificationListTemplate({
   data = [],
 }: NotificationListTemplateProps) {
   const count = data.length;

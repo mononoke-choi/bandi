@@ -1,6 +1,9 @@
 {
+  "compilerOptions": {
+    "plugins": [{ "name": "next" }]
+  },
   "exclude": ["node_modules"],
-  "extends": "tsconfig/nextjs",
+  "extends": "tsconfig/nextjs.json",
   "include": [
     "**/*.ts",
     "**/*.tsx",

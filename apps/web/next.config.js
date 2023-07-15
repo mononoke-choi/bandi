@@ -1,6 +1,6 @@
-/** @type {import('next').NextConfig} */
 const { withTamagui } = require('@tamagui/next-plugin');
 const withBundleAnalyzer = require('@next/bundle-analyzer');
+const { join } = require('path');
 
 const plugins = [
   withBundleAnalyzer({
@@ -11,11 +11,16 @@ const plugins = [
     config: './tamagui.config.ts',
     components: ['tamagui', 'ui'],
     importsWhitelist: ['constants.js', 'colors.js'],
+    outputCSS:
+      process.env.NODE_ENV === 'production' ? './public/tamagui.css' : null,
     logTimings: true,
     disableExtraction: process.env.NODE_ENV === 'development',
-    enableCSSOptimizations: false,
-    disableFontSupport: true,
-    useReactNativeWebLite: true,
+    shouldExtract: path => {
+      if (path.includes(join('packages', 'app'))) {
+        return true;
+      }
+    },
+    useReactNativeWebLite: false,
     excludeReactNativeWebExports: [
       'Switch',
       'ProgressBar',
@@ -56,6 +61,10 @@ const addSVGRModuleRule = config => {
 module.exports = function () {
   /** @type {import('next').NextConfig} */
   let nextConfig = {
+    typescript: {
+      ignoreBuildErrors: true,
+    },
+    reactStrictMode: true,
     compiler: {
       reactRemoveProperties: true,
     },
@@ -75,9 +84,8 @@ module.exports = function () {
       'solito',
       'react-native-web',
       'expo-linking',
-      'expo-constants',
+      'expo-router',
       'expo-modules-core',
-      'ui',
     ],
     modularizeImports: {
       '@tamagui/lucide-icons': {

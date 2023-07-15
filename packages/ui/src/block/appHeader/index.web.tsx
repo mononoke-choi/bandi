@@ -1,28 +1,16 @@
 'use client';
 
 import 'client-only';
+import { ChevronLeft } from '@tamagui/lucide-icons';
 import { isFunction } from 'lodash';
 import { Route } from 'next';
 import { useRouter } from 'next/navigation';
-import React, { ComponentProps, ReactNode } from 'react';
+import React from 'react';
 import { Button, Stack, Text, XStack } from 'tamagui';
-import ChevronLeftSVG from 'ui/src/assets/chevron-left.svg';
 
 import { ACTIVE_TINT_COLOR, HEADER_ICON_SIZE } from '../../config/constant';
 
-export interface AppHeaderProps {
-  title?: string | { (props: ComponentProps<typeof Text>): ReactNode };
-  headerLeft?: (props: {
-    tintColor?: string;
-    pressColor?: string;
-    pressOpacity?: number;
-  }) => React.ReactNode;
-  headerRight?: (props: {
-    tintColor?: string;
-    pressColor?: string;
-    pressOpacity?: number;
-  }) => React.ReactNode;
-}
+import { AppHeaderProps, HeaderBackButtonProps } from './shared';
 
 const styles = {
   floatingCenterTitle: {
@@ -36,11 +24,7 @@ const styles = {
   tintColor: ACTIVE_TINT_COLOR,
 } as const;
 
-export default function AppHeader({
-  title,
-  headerRight,
-  headerLeft,
-}: AppHeaderProps) {
+export function AppHeader({ title, headerRight, headerLeft }: AppHeaderProps) {
   const hasLeftItem = isFunction(headerLeft);
   const titleStyle = {
     fontFamily: '$body',
@@ -86,10 +70,6 @@ export default function AppHeader({
   );
 }
 
-interface HeaderBackButtonProps {
-  fallbackUrl: string;
-}
-
 export function HeaderBackButton({ fallbackUrl }: HeaderBackButtonProps) {
   const { back, push } = useRouter();
 
@@ -108,7 +88,7 @@ export function HeaderBackButton({ fallbackUrl }: HeaderBackButtonProps) {
         }
       }}
     >
-      <ChevronLeftSVG width={HEADER_ICON_SIZE} height={HEADER_ICON_SIZE} />
+      <ChevronLeft width={HEADER_ICON_SIZE} height={HEADER_ICON_SIZE} />
     </Button>
   );
 }

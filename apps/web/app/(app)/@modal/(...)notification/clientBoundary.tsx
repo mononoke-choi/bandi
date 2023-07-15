@@ -7,10 +7,7 @@ import { map } from 'lodash';
 import { useRouter } from 'next/navigation';
 import { useEffect, useRef, useState } from 'react';
 import { Sheet, Text } from 'tamagui';
-import {
-  FixedRow,
-  ESTIMATED_ITEM_SIZE,
-} from 'ui/src/template/notificationList';
+import { FixedRow, ESTIMATED_ITEM_SIZE } from 'ui';
 
 interface ClientBoundaryProps {
   data: GetApiNotifications200Item[];

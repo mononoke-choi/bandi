@@ -2,7 +2,7 @@ import { nullable, object, string, bool, optional } from '@recoiljs/refine';
 import { atom } from 'recoil';
 import { syncEffect } from 'recoil-sync';
 
-import { STORE_KEY } from '../../config/constant';
+import { STORE_KEY } from '../config/constant';
 
 type UserInfoState = {
   auth: boolean;

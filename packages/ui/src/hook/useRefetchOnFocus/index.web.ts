@@ -1,5 +1,4 @@
-import { useFocusEffect } from 'expo-router';
-import { useCallback, useEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 
 /**
  *  This hook will call the provided refetch function when the screen has
@@ -20,7 +19,7 @@ import { useCallback, useEffect, useRef } from 'react';
  * if you need some detail example how to use this hook please check this out
  */
 
-const useRefetchOnFocus = (refetch: () => void, onDidMount = true) => {
+export const useRefetchOnFocus = (refetch: () => void, onDidMount = true) => {
   const firstTimeRef = useRef(true);
 
   useEffect(
@@ -32,16 +31,20 @@ const useRefetchOnFocus = (refetch: () => void, onDidMount = true) => {
     [refetch],
   );
 
-  useFocusEffect(
-    useCallback(() => {
+  useEffect(() => {
+    const onFocus = () => {
       if (firstTimeRef.current) {
         firstTimeRef.current = false;
         return;
       }
-
       refetch();
-    }, [refetch]),
-  );
-};
+    };
 
-export { useRefetchOnFocus };
+    window.addEventListener('focus', onFocus);
+    onFocus();
+
+    return () => {
+      window.removeEventListener('focus', onFocus);
+    };
+  }, []);
+};

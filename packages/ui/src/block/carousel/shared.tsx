@@ -1,5 +1,5 @@
 import useEmblaCarousel from 'embla-carousel-react';
-import React, { ComponentProps, HTMLAttributes, ReactNode } from 'react';
+import { ComponentProps, HTMLAttributes, ReactNode } from 'react';
 // eslint-disable-next-line import/default
 import Swiper from 'react-native-swiper';
 

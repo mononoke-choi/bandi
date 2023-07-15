@@ -1,16 +1,15 @@
 'use client';
 
 import 'client-only';
+import { Bell } from '@tamagui/lucide-icons';
 import { Link } from 'solito/link';
 import { Text } from 'tamagui';
-import { HEADER_ICON_SIZE } from 'ui/config/constant';
-import AlarmSVG from 'ui/src/assets/alarm.svg';
-import AppHeader, { AppHeaderProps } from 'ui/src/block/appHeader.web';
+import { AppHeader, AppHeaderProps, HEADER_ICON_SIZE } from 'ui';
 
 const Title: AppHeaderProps['title'] = styles => <Text {...styles}>Home</Text>;
 const HeaderRight: AppHeaderProps['headerRight'] = () => (
   <Link href="/notification">
-    <AlarmSVG width={HEADER_ICON_SIZE} height={HEADER_ICON_SIZE} />
+    <Bell width={HEADER_ICON_SIZE} height={HEADER_ICON_SIZE} />
   </Link>
 );
 

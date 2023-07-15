@@ -12,9 +12,8 @@ import { StatusBar } from 'expo-status-bar';
 import { useEffect } from 'react';
 import { useColorScheme } from 'react-native';
 import { RecoilRoot } from 'recoil';
-import { TamaguiProvider, Theme } from 'tamagui';
-import { WithRecoilSync } from 'ui/src/HOC/withRecoilSync';
-import tamaguiConfig from 'ui/src/tamagui.config';
+import { TamaguiProvider } from 'tamagui';
+import { tamaguiConfig, WithRecoilSync } from 'ui';
 
 dayjs.locale('ko');
 dayjs.extend(duration);
@@ -32,6 +31,8 @@ export const unstable_settings = {
   initialRouteName: '(tabs)',
 };
 
+// Prevent the splash screen from auto-hiding before asset loading is complete.
+SplashScreen.preventAutoHideAsync();
 export default function RootLayout() {
   const colorScheme = useColorScheme();
 
@@ -45,31 +46,35 @@ export default function RootLayout() {
     if (error) throw error;
   }, [error]);
 
+  useEffect(() => {
+    if (loaded) {
+      SplashScreen.hideAsync();
+    }
+  }, [loaded]);
+
   if (!loaded) {
-    return <SplashScreen />;
+    return null;
   }
 
   return (
-    <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-      <TamaguiProvider config={tamaguiConfig}>
-        <Theme name={colorScheme}>
-          <RecoilRoot>
-            <WithRecoilSync>
-              <Stack>
-                <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-                <Stack.Screen name="index" />
-                <Stack.Screen name="setting" />
-                <Stack.Screen
-                  name="modal"
-                  options={{ presentation: 'modal' }}
-                />
-              </Stack>
-            </WithRecoilSync>
-          </RecoilRoot>
-        </Theme>
+    <TamaguiProvider
+      config={tamaguiConfig}
+      defaultTheme={colorScheme ?? 'light'}
+    >
+      <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
+        <RecoilRoot>
+          <WithRecoilSync>
+            <Stack>
+              <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+              <Stack.Screen name="index" />
+              <Stack.Screen name="setting" />
+              <Stack.Screen name="modal" options={{ presentation: 'modal' }} />
+            </Stack>
+          </WithRecoilSync>
+        </RecoilRoot>
         <StatusBar style="light" backgroundColor="#000000" />
-      </TamaguiProvider>
-    </ThemeProvider>
+      </ThemeProvider>
+    </TamaguiProvider>
   );
 }
 

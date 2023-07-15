@@ -1,15 +1,14 @@
 'use client';
 
 import 'client-only';
-import type { Variable } from '@tamagui/web';
 import { useWindowVirtualizer } from '@tanstack/react-virtual';
 import { map } from 'lodash';
 import React, { Fragment } from 'react';
 import { getTokens, getVariable } from 'tamagui';
-
 import { WindowingProps } from './shared';
+import { Variable } from '@tamagui/web';
 
-export default function Windowing<T>(props: WindowingProps<T>) {
+export function Windowing<T>(props: WindowingProps<T>) {
   const rowVirtualizer = useWindowVirtualizer({
     ...props.web,
     paddingStart: (getTokens({ prefixed: true }).size['$4.5'] as Variable).val,

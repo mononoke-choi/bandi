@@ -1,4 +1,4 @@
-import { GetApiHello200 } from 'api/src';
+import { GetApiHello200 } from 'api';
 import React, { ReactNode } from 'react';
 import { Text, YStack } from 'tamagui';
 

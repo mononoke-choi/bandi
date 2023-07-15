@@ -1,14 +1,11 @@
-import { getApiHello } from 'api';
-import { GetApiHello200 } from 'api/src';
+import { getApiHello, GetApiHello200 } from 'api';
 import React, { useCallback, useState } from 'react';
 
 import { useRefetchOnFocus } from '../../hook/useRefetchOnFocus';
 
 import { SharedChatTemplate, SharedChatIndexTemplateProps } from './shared';
 
-export default function ChatIndexTemplate({
-  children,
-}: SharedChatIndexTemplateProps) {
+export function ChatIndexTemplate({ children }: SharedChatIndexTemplateProps) {
   const [response, setResponse] = useState<GetApiHello200>();
 
   useRefetchOnFocus(

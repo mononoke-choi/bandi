@@ -6,7 +6,8 @@ interface UseOnlineManagerProps {
   onConnected?: () => void;
   onDisConnected?: () => void;
 }
-const useOnlineManager = (callbacks: UseOnlineManagerProps) => {
+
+export const useOnlineManager = (callbacks: UseOnlineManagerProps) => {
   useEffect(
     function navigateToOfflineScreen() {
       const unsubscribe = addEventListener(state => {
@@ -26,5 +27,3 @@ const useOnlineManager = (callbacks: UseOnlineManagerProps) => {
     [callbacks],
   );
 };
-
-export { useOnlineManager };

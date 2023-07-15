@@ -1,7 +1,7 @@
+import { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import { ReactNode } from 'react';
-
-import './(app)/reset.css';
+import './reset.css';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -27,7 +27,7 @@ export default function RootLayout({
   );
 }
 
-export const metadata = {
+export const metadata: Metadata = {
   title: {
     default: 'Bandi',
     template: `%s | Bandi`,

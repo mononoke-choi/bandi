@@ -1,6 +1,6 @@
 import 'server-only';
-import { getApiPost } from 'api/src';
-import HomeTemplate from 'ui/src/template/home';
+import { getApiPost } from 'api';
+import { HomeTemplate } from 'ui';
 
 import ClientBoundary from './clientBoundary';
 

@@ -59,7 +59,7 @@ const getSlackMessagePayload = (
   });
 };
 
-export async function GET(request: Request) {
+export async function POST(request: Request) {
   const body = (await request.json()) as EASBuildPayload;
   const headersList = headers();
   const isErrorBuild = body.status !== 'finished';
@@ -114,4 +114,4 @@ export async function GET(request: Request) {
   }
 }
 
-export const runtime = 'experimental-edge';
+export const runtime = 'edge';

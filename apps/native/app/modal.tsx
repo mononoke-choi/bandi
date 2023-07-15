@@ -4,7 +4,7 @@ import { StatusBar } from 'expo-status-bar';
 import { useEffect, useState } from 'react';
 import { Platform } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import NotificationListTemplate from 'ui/src/template/notificationList';
+import { NotificationListTemplate } from 'ui';
 
 export default function ModalScreen() {
   const [data, setData] = useState<GetApiNotifications200Item[]>([]);

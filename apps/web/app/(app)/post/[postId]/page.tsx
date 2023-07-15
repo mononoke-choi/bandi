@@ -1,6 +1,6 @@
 import { getApiPostPostId } from 'api';
 import React from 'react';
-import PostIdTemplate from 'ui/src/template/post/[postId]/index';
+import { PostIdTemplate } from 'ui';
 
 import ClientBoundary from './clientBoundary';
 

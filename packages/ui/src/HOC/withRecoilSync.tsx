@@ -3,10 +3,10 @@ import { DefaultValue } from 'recoil';
 import type { RecoilSyncOptions } from 'recoil-sync';
 import { RecoilSync } from 'recoil-sync';
 
-import { STORE_KEY } from '../../config/constant';
+import { STORE_KEY } from '../config/constant';
 import { MMKVStorage } from '../store/mmkv';
 
-const WithRecoilSync: FC<RecoilSyncOptions> = ({
+export const WithRecoilSync: FC<RecoilSyncOptions> = ({
   children,
   ...restRecoilSyncProps
 }) => {
@@ -41,5 +41,3 @@ const WithRecoilSync: FC<RecoilSyncOptions> = ({
     </RecoilSync>
   );
 };
-
-export { WithRecoilSync };

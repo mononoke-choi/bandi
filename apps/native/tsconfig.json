@@ -3,12 +3,12 @@
     "strict": true,
     "types": ["detox", "jest", "node"]
   },
-  "exclude": [
-    "node_modules",
-    "babel.config.js",
-    "metro.config.js",
-    "jest.config.js"
-  ],
   "extends": "expo/tsconfig.base",
-  "include": ["**/*.js", "**/*.jsx", "**/*.ts", "**/*.tsx", "../../@types/**/*"]
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    ".expo/types/**/*.ts",
+    "expo-env.d.ts",
+    "../../@types/**/*"
+  ]
 }

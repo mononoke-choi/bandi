@@ -1,7 +1,7 @@
 # [Native] Available commands
 
 - `dev`: Run start script
-- `start`: Starts the development server with ios simulator and debugger
+- `start`: Starts the development server with ios simulator
 - `prebuild`: Generate native source code
 - `start:all`: Starts the development server with ios, android simulator
 - `ios:build:local`: Build ios app on local environment
@@ -17,7 +17,6 @@
 - `detox:ios:debug:test`: Run e2e ios development environment
 - `detox:ios:release:build`: Build ios production environment e2e app
 - `detox:ios:release:test`: Run e2e ios production environment
-- `debugger`: Launch react-native-debugger by CLI 
 - `lint`: Lints the code using ESLint
 - `clean`: Clear build outputs
 

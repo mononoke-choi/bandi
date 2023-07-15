@@ -1,13 +1,10 @@
+import type { IconProps } from '@tamagui/helpers-icon';
+import { Home, MessageCircle, User, Users } from '@tamagui/lucide-icons';
 import { Tabs } from 'expo-router';
-import React, { FC } from 'react';
-import type { SvgProps } from 'react-native-svg';
+import React, { NamedExoticComponent } from 'react';
 import { useTheme } from 'tamagui';
 
-import { ACTIVE_TINT_COLOR } from '../../../config/constant';
-import ChatSVG from '../../assets/chat.svg';
-import CrewSVG from '../../assets/crew.svg';
-import HomeSVG from '../../assets/home.svg';
-import MyPageSVG from '../../assets/myPage.svg';
+import { ACTIVE_TINT_COLOR } from '../../config/constant';
 
 type TabBarIconReturn = Required<
   Pick<
@@ -20,7 +17,7 @@ type TabBarIconReturn = Required<
 };
 export type TabBarIcon = () => TabBarIconReturn;
 
-function getTabBarIcon(SVG: FC<SvgProps>) {
+function getTabBarIcon(SVG: NamedExoticComponent<IconProps>) {
   return function TabBarIcon({
     size,
     focused,
@@ -39,28 +36,28 @@ function getTabBarIcon(SVG: FC<SvgProps>) {
 
 export const getSharedHomeTabIconOptions: TabBarIcon = () => {
   return {
-    tabBarIcon: getTabBarIcon(HomeSVG),
+    tabBarIcon: getTabBarIcon(Home),
     title: 'Home',
   };
 };
 
 export const getSharedCrewTabBarIconOptions: TabBarIcon = () => {
   return {
-    tabBarIcon: getTabBarIcon(CrewSVG),
+    tabBarIcon: getTabBarIcon(Users),
     title: 'Crew',
   };
 };
 
 export const getSharedChatTabBarIconOptions: TabBarIcon = () => {
   return {
-    tabBarIcon: getTabBarIcon(ChatSVG),
+    tabBarIcon: getTabBarIcon(MessageCircle),
     title: 'Chat',
   };
 };
 
 export const getSharedMyPageTabBarIconOptions: TabBarIcon = () => {
   return {
-    tabBarIcon: getTabBarIcon(MyPageSVG),
+    tabBarIcon: getTabBarIcon(User),
     title: 'MyPage',
   };
 };

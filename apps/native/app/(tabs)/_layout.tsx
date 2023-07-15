@@ -1,13 +1,14 @@
 import { Tabs } from 'expo-router';
 import { useTheme } from 'tamagui';
-import { ACTIVE_TINT_COLOR, HEADER_EDGE_SPACE_TOKEN } from 'ui/config/constant';
-import MyPageHeaderRight from 'ui/src/layout/appHeader/myPage';
 import {
+  ACTIVE_TINT_COLOR,
+  HEADER_EDGE_SPACE_TOKEN,
+  MyPageHeaderRight,
   getChatTabBarIconOptions,
   getCrewTabBarIconOptions,
   getHomeTabIconOptions,
   getMyPageTabBarIconOptions,
-} from 'ui/src/layout/tabBar/icons';
+} from 'ui';
 
 export const unstable_settings = {
   initialRouteName: 'home',
