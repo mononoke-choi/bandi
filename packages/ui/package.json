@@ -30,7 +30,7 @@
     "@react-native-community/netinfo": "9.3.10",
     "@shopify/flash-list": "1.4.3",
     "@tamagui/animations-react-native": "^1.41.1",
-    "@tamagui/babel-plugin": "^1.41.1",
+    "@tamagui/babel-plugin": "^1.43.4",
     "@tamagui/config": "^1.41.1",
     "@tamagui/font-inter": "^1.41.1",
     "@tamagui/lucide-icons": "^1.41.1",
